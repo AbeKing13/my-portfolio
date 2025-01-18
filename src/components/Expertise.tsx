@@ -1,45 +1,57 @@
 import React from "react";
 import '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faReact, faDocker, faPython, faMicrosoft } from '@fortawesome/free-brands-svg-icons';
-import { faCode} from '@fortawesome/free-solid-svg-icons';
+import { faReact } from '@fortawesome/free-brands-svg-icons';
+import { faCode, faDatabase, faTools} from '@fortawesome/free-solid-svg-icons';
 import Chip from '@mui/material/Chip';
 import '../assets/styles/Expertise.scss';
 
 const programmingSkills = [
-    { name: "Python", icon: faPython },
+    { name: "Python" },
+    { name: "Java" },
     { name: "C" },
     { name: "C++" },
     { name: "JavaScript" },
-    { name: "Java" }
+    { name: "TypeScript" },
+    { name: "API Integration" },
+    { name: "Object-Oriented Programming" }
 ];
 
-const webDevelopmentAndDatabases = [
-    { name: "React", icon: faReact },
+const webDevelopmentSkills = [
+    { name: "React.js" },
+    { name: "Node.js" },
     { name: "HTML" },
     { name: "CSS" },
     { name: "JQuery" },
-    { name: "JSON" },
-    { name: "SQL" },
-    { name: "MySQL" },
-    { name: "MariaDB" },
-    { name: "PostgreSQL" }
+    { name: "Maven" }
 ];
 
-const softwareAndTools = [
+const dataSkills = [
+    { name: "ETL" },
+    { name: "JSON" },
+    { name: "BigQuery" },
+    { name: "SQL Query" },
+    { name: "MySQL" },
+    { name: "PostgreSQL" },
+    { name: "MariaDB" },
+    { name: "Pandas" },
+    { name: "NumPy" },
+    { name: "Statistical Analysis" }
+];
+
+const toolsAndPlatforms = [
     { name: "GitHub" },
-    { name: "Docker"},
-    { name: "Azure"},
-    { name: "Bash" },
-    { name: "VirtualBox" },
-    { name: "MATLAB" },
-    { name: "SQL Server Management Studio" },
-    { name: "Ubuntu"},
-    { name: "Windows Server"},
+    { name: "Docker" },
+    { name: "Azure" },
     { name: "Visual Studio Code" },
     { name: "PyCharm" },
-    { name: "IntelliJ IDEA" }
+    { name: "IntelliJ IDEA" },
+    { name: "Ubuntu" },
+    { name: "Windows Server" },
+    { name: "Bash" },
+    { name: "Matlab" },
 ];
+
 
 function Expertise() {
     return (
@@ -52,26 +64,36 @@ function Expertise() {
                     <h3>Programming</h3>
                     <div className="flex-chips">
                         {programmingSkills.map((skill, index) => (
-                            <Chip key={index} className='chip' label={skill.name} icon={skill.icon && <FontAwesomeIcon icon={skill.icon} />} />
+                            <Chip key={index} className='chip' label={skill.name} />
+                        ))}
+                    </div>
+                </div>
+
+                <div className="skill">
+                    <FontAwesomeIcon icon={faDatabase} size="3x"/>
+                    <h3>Data</h3>
+                    <div className="flex-chips">
+                        {dataSkills.map((skill, index) => (
+                            <Chip key={index} className='chip' label={skill.name} />
                         ))}
                     </div>
                 </div>
 
                 <div className="skill">
                     <FontAwesomeIcon icon={faReact} size="3x"/>
-                    <h3>Web Development & Databases</h3>
+                    <h3>Web Development</h3>
                     <div className="flex-chips">
-                        {webDevelopmentAndDatabases.map((skill, index) => (
-                            <Chip key={index} className='chip' label={skill.name} icon={skill.icon && <FontAwesomeIcon icon={skill.icon} />} />
+                        {webDevelopmentSkills.map((service, index) => (
+                            <Chip key={index} className='chip' label={service.name} />
                         ))}
                     </div>
                 </div>
 
                 <div className="skill">
-                    <FontAwesomeIcon icon={faMicrosoft} size="3x"/>
-                    <h3>Software & Tools</h3>
+                    <FontAwesomeIcon icon={faTools} size="3x"/>
+                    <h3>Development Tools & Environments</h3>
                     <div className="flex-chips">
-                        {softwareAndTools.map((service, index) => (
+                        {toolsAndPlatforms.map((service, index) => (
                             <Chip key={index} className='chip' label={service.name} />
                         ))}
                     </div>

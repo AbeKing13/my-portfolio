@@ -19,6 +19,21 @@
     align-items: center;
     text-align: left;
 }
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    width: 100%;
+    
+    // Create the layout for 3-2 pattern
+    .skill:nth-last-child(-n+2) {
+        grid-column: span 1;
+    }
+    .skill:nth-last-child(1) {
+        grid-column: 2 / span 1;
+    }
+}
   
 .chip {
     color: rgb(39, 40, 34) !important;
