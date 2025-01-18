@@ -1,45 +1,57 @@
 import React from "react";
 import '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faReact, faDocker, faPython } from '@fortawesome/free-brands-svg-icons';
+import { faReact } from '@fortawesome/free-brands-svg-icons';
+import { faCode, faDatabase, faTools} from '@fortawesome/free-solid-svg-icons';
 import Chip from '@mui/material/Chip';
 import '../assets/styles/Expertise.scss';
 
-const labelsFirst = [
-    "React",
-    "TypeScript",
-    "JavaScript",
-    "HTML5",
-    "CSS3",
-    "SASS",
-    "Flask",
-    "Python",
-    "SQL",
-    "PostgreSQL",
-    "Postman"
+const programmingSkills = [
+    { name: "Python" },
+    { name: "Java" },
+    { name: "C" },
+    { name: "C++" },
+    { name: "JavaScript" },
+    { name: "TypeScript" },
+    { name: "API Integration" },
+    { name: "Object-Oriented Programming" }
 ];
 
-const labelsSecond = [
-    "Git",
-    "GitHub Actions",
-    "Docker",
-    "AWS",
-    "Azure",
-    "Linux",
-    "Snowflake",
-    "Pandas",
-    "Selenium",
+const webDevelopmentSkills = [
+    { name: "React.js" },
+    { name: "Node.js" },
+    { name: "HTML" },
+    { name: "CSS" },
+    { name: "JQuery" },
+    { name: "Maven" }
 ];
 
-const labelsThird = [
-    "OpenAI",
-    "Groq",
-    "LangChain",
-    "Qdrant",
-    "Hugging Face",
-    "LlamaIndex",
-    "Streamlit",
+const dataSkills = [
+    { name: "ETL" },
+    { name: "JSON" },
+    { name: "BigQuery" },
+    { name: "SQL Query" },
+    { name: "MySQL" },
+    { name: "PostgreSQL" },
+    { name: "MariaDB" },
+    { name: "Pandas" },
+    { name: "NumPy" },
+    { name: "Statistical Analysis" }
 ];
+
+const toolsAndPlatforms = [
+    { name: "GitHub" },
+    { name: "Docker" },
+    { name: "Azure" },
+    { name: "Visual Studio Code" },
+    { name: "PyCharm" },
+    { name: "IntelliJ IDEA" },
+    { name: "Ubuntu" },
+    { name: "Windows Server" },
+    { name: "Bash" },
+    { name: "Matlab" },
+];
+
 
 function Expertise() {
     return (
@@ -48,37 +60,41 @@ function Expertise() {
             <h1>Expertise</h1>
             <div className="skills-grid">
                 <div className="skill">
+                    <FontAwesomeIcon icon={faCode} size="3x"/>
+                    <h3>Programming</h3>
+                    <div className="flex-chips">
+                        {programmingSkills.map((skill, index) => (
+                            <Chip key={index} className='chip' label={skill.name} />
+                        ))}
+                    </div>
+                </div>
+
+                <div className="skill">
+                    <FontAwesomeIcon icon={faDatabase} size="3x"/>
+                    <h3>Data</h3>
+                    <div className="flex-chips">
+                        {dataSkills.map((skill, index) => (
+                            <Chip key={index} className='chip' label={skill.name} />
+                        ))}
+                    </div>
+                </div>
+
+                <div className="skill">
                     <FontAwesomeIcon icon={faReact} size="3x"/>
-                    <h3>Full Stack Web Development</h3>
-                    <p>I have built a diverse array of web applications from scratch using modern technologies such as React and Flask. I have a strong proficiency in the SDLC process and frontend + backend development.</p>
+                    <h3>Web Development</h3>
                     <div className="flex-chips">
-                        <span className="chip-title">Tech stack:</span>
-                        {labelsFirst.map((label, index) => (
-                            <Chip key={index} className='chip' label={label} />
+                        {webDevelopmentSkills.map((service, index) => (
+                            <Chip key={index} className='chip' label={service.name} />
                         ))}
                     </div>
                 </div>
 
                 <div className="skill">
-                    <FontAwesomeIcon icon={faDocker} size="3x"/>
-                    <h3>DevOps & Automation</h3>
-                    <p>Once the application is built, I help clients set up DevOps testing, CI/CD pipelines, and deployment automation to support the successful Go-Live.</p>
+                    <FontAwesomeIcon icon={faTools} size="3x"/>
+                    <h3>Development Tools & Environments</h3>
                     <div className="flex-chips">
-                        <span className="chip-title">Tech stack:</span>
-                        {labelsSecond.map((label, index) => (
-                            <Chip key={index} className='chip' label={label} />
-                        ))}
-                    </div>
-                </div>
-
-                <div className="skill">
-                    <FontAwesomeIcon icon={faPython} size="3x"/>
-                    <h3>GenAI & LLM</h3>
-                    <p>Stay relevant in the market by leveraging the latest AI models in your projects. I have professional experience building enterprise grade GenAI-enabled solutions to empower intelligent decision making.</p>
-                    <div className="flex-chips">
-                        <span className="chip-title">Tech stack:</span>
-                        {labelsThird.map((label, index) => (
-                            <Chip key={index} className='chip' label={label} />
+                        {toolsAndPlatforms.map((service, index) => (
+                            <Chip key={index} className='chip' label={service.name} />
                         ))}
                     </div>
                 </div>
