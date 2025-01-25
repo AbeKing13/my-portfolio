@@ -21,6 +21,31 @@
     }
 }
 
+.details-box {
+    background: white;
+    color: rgb(39, 40, 34);
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .hoverable:hover .details-box {
+    display: block;
+  }
+  
+  .vertical-timeline-element--work {
+    position: relative; /* Ensure the element creates a stacking context */
+    z-index: 1; /* Ensure the element is above other elements */
+  }
+  
+  @media (max-width: 768px) {
+    .vertical-timeline-element--work:hover {
+      margin-bottom: 70px; /* Adjust this value as needed to ensure space for the details box */
+    }
+  }
+
 
 .vertical-timeline span {
     color: white;
