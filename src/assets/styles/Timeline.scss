@@ -16,7 +16,7 @@
 }
 
 .details-box.active {
-  max-height: 500px; /* adjust as needed */
+  max-height: 500px;
   opacity: 1;
   margin-top: 1rem;
 }
@@ -92,7 +92,7 @@
 }
 
 .vertical-timeline-element-title {
-  margin-bottom: 0.15rem; // adjust as needed for tighter spacing
+  margin-bottom: 0.15rem;
 }
 
 .vertical-timeline-element-company {
@@ -113,11 +113,17 @@
   }
 
   .vertical-timeline-element-title {
-    font-size: 1.2rem; // adjust the size as needed
+    font-size: 1.2rem;
   }
 
   .vertical-timeline-element-company {
-    font-size: 1.07rem; // adjust the size as needed
+    font-size: 1.07rem;
+  }
+
+  .vertical-timeline-element-date {
+    display: block !important;
+    font-size: 0.9rem;
+    color: rgb(39, 40, 34) !important;
   }
 }
 

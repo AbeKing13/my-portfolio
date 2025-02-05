@@ -127,7 +127,7 @@ function Timeline() {
             activeElement={activeElement}
             setActiveElement={setActiveElement}
             isMobile={isMobile}
-            date="2020 - 2020"
+            date="June 2022 - Aug 2022"
             title="Technical Support Technician"
             company="Addatech"
             city="Montreal, QC, CA"
