@@ -107,6 +107,12 @@
   margin-bottom: 0.25rem;
 }
 
+.vertical-timeline-element--work.in-view .vertical-timeline-element-content,
+.vertical-timeline-element--work.in-view .vertical-timeline-element-icon {
+  transform: scale(1.05);
+  transition: transform 0.5s ease;
+}
+
 @media (max-width: 768px) {
   .click-arrow {
     bottom: -40px; // move arrow further down on mobile
@@ -125,17 +131,22 @@
     font-size: 0.9rem;
     color: rgb(39, 40, 34) !important;
   }
+
+  .vertical-timeline-element--work:hover .vertical-timeline-element-content,
+  .vertical-timeline-element--work:hover .vertical-timeline-element-icon {
+    transform: none; // disable zoom on hover
+  }
 }
 
 .company-logo {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 40px;
-    height: 40px;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
+}
