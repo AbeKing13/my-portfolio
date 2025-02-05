@@ -139,20 +139,3 @@
       object-fit: contain;
     }
   }
-
-/* Light mode overrides */
-.light-mode {
-  .vertical-timeline-element--work {
-    .vertical-timeline-element-content {
-      background: #f8f9fa; /* lighter background */
-      color: #0d1116; /* darker text */
-    }
-    .vertical-timeline-element-content-arrow {
-      border-right: 7px solid #f8f9fa;
-    }
-    .vertical-timeline-element-icon {
-      background: #0d1116;
-      color: #f8f9fa;
-    }
-  }
-}
