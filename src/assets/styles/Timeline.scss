@@ -1,38 +1,152 @@
+/* Items container styling */
+.items-container {
+  padding: 2rem;
+  h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+}
+
+/* Smooth transition for the details box */
+.details-box {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.details-box.active {
+  max-height: 500px;
+  opacity: 1;
+  margin-top: 1rem;
+}
+
+/* Show details-box on hover for desktop version */
+.hoverable:hover .details-box {
+  display: block;
+}
+
+/* Timeline element styles and hover effects */
+.vertical-timeline-element--work {
+  position: relative; /* Create stacking context */
+  z-index: 1; /* Ensure the element is above others */
+
+  .vertical-timeline-element-content {
+    background: white;
+    color: rgb(39, 40, 34);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+  }
+
+  .vertical-timeline-element-content-arrow {
+    border-right: 7px solid white;
+  }
+
+  .vertical-timeline-element-icon {
+    background: #5000ca;
+    color: rgb(39, 40, 34);
+    transition: transform 0.5s ease;
+  }
+
+  &:hover .vertical-timeline-element-content,
+  &:hover .vertical-timeline-element-icon {
+    transform: scale(1.05);
+  }
+}
+
+/* Container for items that are clickable on mobile */
+.mobile-clickable {
+  cursor: pointer;
+  position: relative;
+}
+
+/* Arrow icon styling: forcing black color */
+.click-arrow {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 1rem;
+  color: black !important;
+  background-color: transparent;
+}
+
+.click-arrow svg {
+  fill: black !important;
+}
+
+/* General timeline typography */
 .vertical-timeline span {
-    color: white;
-    font-family: 'Courier Prime', monospace;
+  color: white;
+  font-family: "Courier Prime", monospace;
 }
 
-.vertical-timeline p {
-    color: rgb(39, 40, 34);
-}
-
+.vertical-timeline p,
 .vertical-timeline-element p {
-    color: rgb(39, 40, 34);
+  color: rgb(39, 40, 34);
 }
 
-.vertical-timeline-element h3 {
-    color: rgb(39, 40, 34);
+/* Title, company, and city styling with reduced spacing */
+.vertical-timeline-element-title,
+.vertical-timeline-element-company,
+.vertical-timeline-element-city {
+  color: rgb(39, 40, 34);
 }
 
-.vertical-timeline-element h4 {
-    color: rgb(39, 40, 34);
+.vertical-timeline-element-title {
+  margin-bottom: 0.15rem;
 }
 
-.vertical-timeline-element span {
-    color: rgb(39, 40, 34);
+.vertical-timeline-element-company {
+  margin-top: 0.1rem; // reduce top margin
+  margin-bottom: 0.15rem; // adjust bottom margin as needed
+  font-weight: 300; // less bold than default
 }
 
-.vertical-timeline-element .vertical-timeline-element-date {
-    color: white;
+.vertical-timeline-element-city {
+  font-weight: normal;
+  margin-top: 0; // no extra space above
+  margin-bottom: 0.25rem;
 }
 
-.svg-inline--fa {
-    color: white;
+.vertical-timeline-element--work.in-view .vertical-timeline-element-content,
+.vertical-timeline-element--work.in-view .vertical-timeline-element-icon {
+  transform: scale(1.05);
+  transition: transform 0.5s ease;
 }
 
-@media screen and (max-width: 1170px) {
-    .vertical-timeline-element .vertical-timeline-element-date {
-        color: rgb(39, 40, 34);
-    }
+@media (max-width: 768px) {
+  .click-arrow {
+    bottom: -40px; // move arrow further down on mobile
+  }
+
+  .vertical-timeline-element-title {
+    font-size: 1.2rem;
+  }
+
+  .vertical-timeline-element-company {
+    font-size: 1.07rem;
+  }
+
+  .vertical-timeline-element-date {
+    display: block !important;
+    font-size: 0.9rem;
+    color: rgb(39, 40, 34) !important;
+  }
+
+  .vertical-timeline-element--work:hover .vertical-timeline-element-content,
+  .vertical-timeline-element--work:hover .vertical-timeline-element-icon {
+    transform: none; // disable zoom on hover
+  }
+}
+
+.company-logo {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
 }
