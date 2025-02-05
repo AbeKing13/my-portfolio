@@ -4,6 +4,7 @@ import "react-vertical-timeline-component/style.min.css";
 import "../../assets/styles/Timeline.scss";
 import TimelineItem from "./TimelineItem";
 
+
 function Timeline() {
   const [activeElement, setActiveElement] = useState<number | null>(null);
   const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth <= 768);
@@ -28,19 +29,24 @@ function Timeline() {
             isMobile={isMobile}
             date="Jan 2025 - Present"
             title="Software Developer Intern"
-            company="Stingray Digital"
-            subtitle="Montreal, QC, CA"
+            company="Stingray"
+            city="Montreal, QC, CA"
             description="Develop ETL jobs, create data marts, build new features, and investigate data issues."
+            logo={<img src={require("../../assets/images/logo_stingray.png")} alt="" />}
             details={
               <>
-                <p><strong>Tasks:</strong></p>
+                <p>
+                  <strong>Tasks:</strong>
+                </p>
                 <ul>
                   <li>Develop ETL jobs</li>
                   <li>Create data marts</li>
                   <li>Build new features</li>
                   <li>Investigate data issues</li>
                 </ul>
-                <p><strong>Technologies:</strong></p>
+                <p>
+                  <strong>Technologies:</strong>
+                </p>
                 <ul>
                   <li>Python</li>
                   <li>SQL</li>
@@ -58,17 +64,22 @@ function Timeline() {
             date="May 2024 - Dec 2024"
             title="Data Analyst"
             company="Shared Services Canada"
-            subtitle="Montreal, QC, CA"
+            city="Montreal, QC, CA"
             description="Data migration, automation, and data visualization."
+            logo={<img src={require("../../assets/images/logo_ssc.png")} alt="" />}
             details={
               <>
-                <p><strong>Tasks:</strong></p>
+                <p>
+                  <strong>Tasks:</strong>
+                </p>
                 <ul>
                   <li>Data migration</li>
                   <li>Automation</li>
                   <li>Data visualization</li>
                 </ul>
-                <p><strong>Technologies:</strong></p>
+                <p>
+                  <strong>Technologies:</strong>
+                </p>
                 <ul>
                   <li>Python</li>
                   <li>SQL</li>
@@ -84,19 +95,24 @@ function Timeline() {
             setActiveElement={setActiveElement}
             isMobile={isMobile}
             date="Jan 2023 - Aug 2023"
-            title="Research and Development Technician"
+            title="R&D Technician"
             company="Matrox"
-            subtitle="Montreal, QC, CA"
+            city="Montreal, QC, CA"
             description="Develop new features, resolve bugs, and perform tests."
+            logo={<img src={require("../../assets/images/logo_matrox.png")} alt="" />}
             details={
               <>
-                <p><strong>Tasks:</strong></p>
+                <p>
+                  <strong>Tasks:</strong>
+                </p>
                 <ul>
                   <li>Develop new features</li>
                   <li>Bug resolution</li>
                   <li>Conduct tests &amp; quality assurance</li>
                 </ul>
-                <p><strong>Technologies:</strong></p>
+                <p>
+                  <strong>Technologies:</strong>
+                </p>
                 <ul>
                   <li>C/C++</li>
                   <li>Python</li>
@@ -114,11 +130,14 @@ function Timeline() {
             date="2020 - 2020"
             title="Technical Support Technician"
             company="Addatech"
-            subtitle="Montreal, QC, CA"
+            city="Montreal, QC, CA"
             description="Provide technical support, software installation, troubleshooting, and user assistance."
+            logo={<img src={require("../../assets/images/logo_addatech.png")} alt="" />}
             details={
               <>
-                <p><strong>Tasks:</strong></p>
+                <p>
+                  <strong>Tasks:</strong>
+                </p>
                 <ul>
                   <li>Technical support</li>
                   <li>Software installation</li>
