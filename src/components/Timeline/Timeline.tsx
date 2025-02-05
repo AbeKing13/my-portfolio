@@ -130,7 +130,7 @@ function Timeline() {
             date="June 2022 - Aug 2022"
             title="Technical Support Technician"
             company="Addatech"
-            city="Montreal, QC, CA"
+            city="Laval, QC, CA"
             description="Provide technical support, software installation, troubleshooting, and user assistance."
             logo={<img src={require("../../assets/images/logo_addatech.png")} alt="" />}
             details={
