@@ -1,18 +1,14 @@
 import React, {useState, useEffect} from "react";
 import {
   Main,
-  Timeline,
   Expertise,
   Project,
   Contact,
   Navigation,
   Footer,
 } from "./components";
+import Timeline from "./components/Timeline/Timeline";
 import FadeIn from './components/FadeIn';
-import TechSupport from "./components/jobs/TechSupport";
-import RnDTechnician from './components/jobs/RnDTechnician';
-import DataAnalyst from "./components/jobs/DataAnalyst";
-import SoftDeveloper from "./components/jobs/SoftDeveloper";
 import './index.scss';
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
@@ -45,10 +41,6 @@ function App() {
         </FadeIn>
         <Footer />
         <Routes>
-        <Route path="/software-developer" element={<SoftDeveloper />} />
-        <Route path="/data-analyst" element={<DataAnalyst />} />
-        <Route path="/rnd-technician" element={<RnDTechnician />} />
-        <Route path="/tech-support" element={<TechSupport />} />
         <Route path="/" element={<Timeline />} />
         </Routes>
     </div>

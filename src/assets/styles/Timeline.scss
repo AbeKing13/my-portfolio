@@ -1,36 +1,49 @@
 .vertical-timeline-element--work {
     .vertical-timeline-element-content {
-        background: white;
-        color: rgb(39, 40, 34);
-        transition: transform 0.3s ease-in-out;
+      background: white;
+      color: rgb(39, 40, 34);
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
     }
-
+  
     .vertical-timeline-element-content-arrow {
-        border-right: 7px solid white;
+      border-right: 7px solid white;
     }
-
+  
     .vertical-timeline-element-icon {
-        background: #5000ca;
-        color: rgb(39, 40, 34);
-        transition: transform 0.3s ease-in-out;
+      background: #5000ca;
+      color: rgb(39, 40, 34);
+      transition: transform 0.5s ease;
     }
-
+  
     &:hover .vertical-timeline-element-content,
     &:hover .vertical-timeline-element-icon {
-        transform: scale(1.05);
+      transform: scale(1.05);
     }
-}
-
-.details-box {
-    background: white;
-    color: rgb(39, 40, 34);
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-    margin-top: 10px;
-    transition: all 0.3s ease-in-out;
   }
   
+  .items-container {
+    padding: 2rem;
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+  }
+  
+  /* Details box smooth transition */
+  .details-box {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+  }
+  
+  .details-box.active {
+    max-height: 500px; /* adjust as needed */
+    opacity: 1;
+    margin-top: 1rem;
+  }
+
+
   .hoverable:hover .details-box {
     display: block;
   }
