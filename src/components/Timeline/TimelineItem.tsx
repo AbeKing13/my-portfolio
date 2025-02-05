@@ -1,8 +1,7 @@
 import React from 'react';
 import { VerticalTimelineElement } from 'react-vertical-timeline-component';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
-
+import { faBriefcase, faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
 interface TimelineItemProps {
   index: number;
@@ -31,7 +30,6 @@ function TimelineItem({
   details,
   icon = <FontAwesomeIcon icon={faBriefcase} />
 }: TimelineItemProps) {
-
   const handleClick = () => {
     if (isMobile) {
       setActiveElement(activeElement === index ? null : index);
@@ -51,12 +49,15 @@ function TimelineItem({
         onClick={isMobile ? handleClick : undefined}
         onMouseEnter={!isMobile ? () => setActiveElement(index) : undefined}
         onMouseLeave={!isMobile ? () => setActiveElement(null) : undefined}
-        className={isMobile ? '' : 'hoverable'}
+        className={isMobile ? 'mobile-clickable' : 'hoverable'}
       >
         <h3 className="vertical-timeline-element-title">{title}</h3>
         <h4 className="vertical-timeline-element-company">{company}</h4>
         <h5 className="vertical-timeline-element-subtitle">{subtitle}</h5>
         <p>{description}</p>
+        <div className="click-arrow">
+          <FontAwesomeIcon icon={activeElement === index ? faChevronUp : faChevronDown} />
+        </div>
         <div className={`details-box ${activeElement === index ? 'active' : ''}`}>
           {details}
         </div>

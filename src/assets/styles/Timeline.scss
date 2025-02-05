@@ -1,27 +1,5 @@
-.vertical-timeline-element--work {
-    .vertical-timeline-element-content {
-      background: white;
-      color: rgb(39, 40, 34);
-      transition: transform 0.5s ease, box-shadow 0.5s ease;
-    }
-  
-    .vertical-timeline-element-content-arrow {
-      border-right: 7px solid white;
-    }
-  
-    .vertical-timeline-element-icon {
-      background: #5000ca;
-      color: rgb(39, 40, 34);
-      transition: transform 0.5s ease;
-    }
-  
-    &:hover .vertical-timeline-element-content,
-    &:hover .vertical-timeline-element-icon {
-      transform: scale(1.05);
-    }
-  }
-  
-  .items-container {
+/* Items container styling */
+.items-container {
     padding: 2rem;
     h1 {
       text-align: center;
@@ -29,7 +7,7 @@
     }
   }
   
-  /* Details box smooth transition */
+  /* Smooth transition for the details box */
   .details-box {
     max-height: 0;
     opacity: 0;
@@ -42,68 +20,109 @@
     opacity: 1;
     margin-top: 1rem;
   }
-
-
+  
+  /* Show details-box on hover for desktop version */
   .hoverable:hover .details-box {
     display: block;
   }
   
+  /* Timeline element styles and hover effects */
   .vertical-timeline-element--work {
-    position: relative; /* Ensure the element creates a stacking context */
-    z-index: 1; /* Ensure the element is above other elements */
+    position: relative; /* Create stacking context */
+    z-index: 1; /* Ensure the element is above others */
+    
+    .vertical-timeline-element-content {
+      background: white;
+      color: rgb(39, 40, 34);
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+    
+    .vertical-timeline-element-content-arrow {
+      border-right: 7px solid white;
+    }
+    
+    .vertical-timeline-element-icon {
+      background: #5000ca;
+      color: rgb(39, 40, 34);
+      transition: transform 0.5s ease;
+    }
+    
+    &:hover .vertical-timeline-element-content,
+    &:hover .vertical-timeline-element-icon {
+      transform: scale(1.05);
+    }
   }
   
+  /* Mobile specific adjustments */
   @media (max-width: 768px) {
+    /* Extra space for details on hover */
     .vertical-timeline-element--work:hover {
-      margin-bottom: 70px; /* Adjust this value as needed to ensure space for the details box */
+      margin-bottom: 70px; /* Adjust as needed */
+    }
+    
+    /* Disable hover zoom on mobile */
+    .vertical-timeline-element--work:hover .vertical-timeline-element-content,
+    .vertical-timeline-element--work:hover .vertical-timeline-element-icon {
+      transform: none;
     }
   }
-
-
-.vertical-timeline span {
+  
+  /* Container for items that are clickable on mobile */
+  .mobile-clickable {
+    cursor: pointer;
+    position: relative;
+  }
+  
+  /* Arrow icon styling: forcing black color */
+  .click-arrow {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 1rem;
+    color: black !important;
+    background-color: transparent;
+  }
+  
+  .click-arrow svg {
+    fill: black !important;
+  }
+  
+  /* General timeline typography */
+  .vertical-timeline span {
     color: white;
     font-family: 'Courier Prime', monospace;
-}
-
-.vertical-timeline p {
+  }
+  
+  .vertical-timeline p,
+  .vertical-timeline-element p {
     color: rgb(39, 40, 34);
-}
+  }
+  
+  /* Title, company, and subtitle styling with reduced spacing */
+  .vertical-timeline-element-title,
+  .vertical-timeline-element-company,
+  .vertical-timeline-element-subtitle {
+    color: rgb(39, 40, 34) !important;
+    margin-bottom: 0.25rem;
+  }
+  
+  /* Light mode overrides */
+  .light-mode {
+    .vertical-timeline-element--work {
+      .vertical-timeline-element-content {
+        background: #f8f9fa; /* lighter background */
+        color: #0d1116;      /* darker text */
+      }
+      .vertical-timeline-element-content-arrow {
+        border-right: 7px solid #f8f9fa;
+      }
+      .vertical-timeline-element-icon {
+        background: #0d1116;
+        color: #f8f9fa;
+      }
 
-.vertical-timeline-element p {
-    color: rgb(39, 40, 34);
-}
-
-.vertical-timeline-element h3 {
-    color: rgb(39, 40, 34);
-}
-
-.vertical-timeline-element h4 {
-    font-size: 1.2rem;
-    font-weight: normal;
-    color: rgb(0, 0, 0);
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-.vertical-timeline-element h5 {
-    color: rgb(39, 40, 34);
-
-}
-
-.vertical-timeline-element span {
-    color: rgb(39, 40, 34);
-}
-
-.vertical-timeline-element .vertical-timeline-element-date {
-    color: white;
-}
-
-.svg-inline--fa {
-    color: white;
-}
-
-@media screen and (max-width: 1170px) {
-    .vertical-timeline-element .vertical-timeline-element-date {
-        color: rgb(39, 40, 34);
     }
-}
+    .vertical-timeline::before {
+        background: #000000;
+      }
+  }
