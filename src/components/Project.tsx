@@ -61,14 +61,14 @@ function Project() {
           <a>
             <h2>Aspire</h2>
           </a>
-            <p>
+          <p>
             Develop a <b>voice assistant</b> named <b>Aspire</b> (still under
             development) for <b>computer control</b>. It enables users to{" "}
             <b>open applications</b>, <b>navigate the web</b>, and ask questions
-            to <b>ChatGPT</b>. The project leverages <b>OpenAI GPT-3</b> and <b>Python</b>,
-            utilizes <b>APIs</b> for integration, and incorporates{" "}
-            <b>audio file management</b>.
-            </p>
+            to <b>ChatGPT</b>. The project leverages <b>OpenAI GPT-3</b> and{" "}
+            <b>Python</b>, utilizes <b>APIs</b> for integration, and
+            incorporates <b>audio file management</b>.
+          </p>
         </div>
         <div className="project">
           <a>
@@ -96,6 +96,50 @@ function Project() {
         <div className="project">
           <a>
             <img
+              src={require("../assets/images/projects/sga.png")}
+              className="zoom"
+              alt="thumbnail"
+              width="100%"
+              style={{ display: "flex", justifyContent: "center" }}
+            />
+          </a>
+          <a>
+            <h2>Class Management System</h2>
+          </a>
+          <p>
+            <p>
+              Developed a <b>Class Management System</b> for the <b>LOG210</b>{" "}
+              course, engineered to <b>streamline</b> the management of{" "}
+              <b>courses</b>,<b>students</b>, and other{" "}
+              <b>academic activities</b>. Built with `<b>TypeScript</b>,{" "}
+              <b>Pug</b> and <b>CSS</b>.
+            </p>
+          </p>
+        </div>
+        <div className="project">
+          <a>
+            <img
+              src={require("../assets/images/projects/portfolio.png")}
+              className="zoom"
+              alt="thumbnail"
+              width="100%"
+              style={{ display: "flex", justifyContent: "center" }}
+            />
+          </a>
+          <a>
+            <h2>Personal Website</h2>
+          </a>
+          <p>
+            Developed a <b>personal website</b> to showcase projects, skills,
+            and experiences using <b>React</b> and <b>Node.js</b>.
+            Built with <b>TypeScript</b> on <b>HTML5</b>{" "}
+            and styled with <b>SASS</b> to ensure a robust, responsive, and
+            interactive design.
+          </p>
+        </div>
+        <div className="project">
+          <a>
+            <img
               src={require("../assets/images/projects/database.png")}
               className="zoom"
               alt="thumbnail"
@@ -108,33 +152,18 @@ function Project() {
           </a>
           <p>
             <p>
-              Set up a <b>web database interface</b> on a <b>Raspberry Pi</b> server with a{" "}
-              <b>web interface</b> that simplifies <b>displaying</b>, <b>entering</b>, and{" "}
-              <b>manipulating data</b>. Leveraging <b>web development</b> best practices, the project 
-              integrates <b>SQL</b> capabilities with a user-friendly <b>user interface</b> and utilizes{" "}
-              <b>MariaDB</b> for robust database management.
+              Set up a <b>web database interface</b> on a <b>Raspberry Pi</b>{" "}
+              server with a <b>web interface</b> that simplifies{" "}
+              <b>displaying</b>, <b>entering</b>, and <b>manipulating data</b>.
+              Leveraging <b>web development</b> best practices, the project
+              integrates <b>SQL</b> capabilities with a user-friendly{" "}
+              <b>user interface</b> and utilizes <b>MariaDB</b> for robust
+              database management.
             </p>
           </p>
         </div>
-        <div className="project">
-          <a>
-            <img
-              src={require("../assets/images/projects/website.png")}
-              className="zoom"
-              alt="thumbnail"
-              width="100%"
-              style={{ display: "flex", justifyContent: "center" }}
-            />
-          </a>
-          <a>
-            <h2>Personal Website</h2>
-          </a>
-          <p>
-            Developed a <b>personal website</b> to showcase projects, skills,
-            and experiences. Implemented <b>React</b>, <b>HTML</b>, <b>CSS</b>,
-            and <b>JavaScript</b> to create a responsive and interactive
-            website.
-          </p>
+        <div className="project more-coming-soon">
+          <h2>More coming soon...</h2>
         </div>
       </div>
     </div>
