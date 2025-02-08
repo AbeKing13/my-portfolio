@@ -1,64 +1,100 @@
 import React from "react";
-import '../assets/styles/Project.scss';
+import "../assets/styles/Project.scss";
 
 function Project() {
-    return(
+  return (
     <div className="projects-container" id="projects">
-        <h1>Personal Projects</h1>
-        <div className="projects-grid">
-            <div className="project">
-                <a href="https://www.filmate.club/" target="_blank" rel="noreferrer"><img className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://www.filmate.club/" target="_blank" rel="noreferrer"><h2>Filmate AI</h2></a>
-                <p>Developed movie finder app with semantic search and sentiment analysis using OpenAI GPT-3.5 Turbo, Qdrant, React, and Flask.</p>
-            </div>
-            <div className="project">
-                <a href="https://yujisatojr.itch.io/highspeedchase" target="_blank" rel="noreferrer"><img className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://yujisatojr.itch.io/highspeedchase" target="_blank" rel="noreferrer"><h2>High Speed Chase</h2></a>
-                <p>Designed, developed, and launched a 3D multiplayer racing game with C# and Unity. This is available on Itch.io for gamers worldwide to enjoy.</p>
-            </div>
-            <div className="project">
-                <a href="https://yujisatojr.itch.io/spacecraft" target="_blank" rel="noreferrer"><img className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://yujisatojr.itch.io/spacecraft" target="_blank" rel="noreferrer"><h2>Astro Raiders</h2></a>
-                <p>Developed and released a 2D shooting game with C# and Unity. This project is hosted on the Itch.io public marketplace.</p>
-            </div>
-            <div className="project">
-                <a href="https://www.datumlearn.com/" target="_blank" rel="noreferrer"><img className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://www.datumlearn.com/" target="_blank" rel="noreferrer"><h2>Datum: Integrated Learning Platform</h2></a>
-                <p>This is an online educational platform that provides high-quality, data science-focused learning resources in the Japanese language. I created the entire platform from scratch using Ruby on Rails.</p>
-            </div>
-            <div className="project">
-                <a href="http://www.wemanage.jp/" target="_blank" rel="noreferrer"><img className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="http://www.wemanage.jp/" target="_blank" rel="noreferrer"><h2>WeManage: Real Estate Asset Management</h2></a>
-                <p>This mobile application allows realtors in Japan to securely manage their property information and view future income predictions. This app is built with Ruby on Rails and JavaScript.</p>
-            </div>
-            <div className="project">
-                <a href="https://www.byuh.edu/covid-19-case-management" target="_blank" rel="noreferrer"><img className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://www.byuh.edu/covid-19-case-management" target="_blank" rel="noreferrer"><h2>COVID-19 Case Management</h2></a>
-                <p>Built official charts for COVID/vaccination tracking for an educational institution using JavaScript and the Google Sheets API v4. The dashboard served the university's leadership in their decision-making processes.</p>
-            </div>
-            <div className="project">
-                <a href="https://github.com/yujisatojr/multi-reg-analysis" target="_blank" rel="noreferrer"><img className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://github.com/yujisatojr/multi-reg-analysis" target="_blank" rel="noreferrer"><h2>Multiple Regression Property Analysis</h2></a>
-                <p>Analyzed the real estate market in Japan and predicted property prices by implementing statistical methods such as OLS and multi-regression analysis. This project leveraged Python and various libraries such as Pandas, NumPy, Matplotlib, and Scikit-Learn.</p>
-            </div>
-            <div className="project">
-                <a href="https://holokai.byuh.edu/programs-of-study" target="_blank" rel="noreferrer"><img className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://holokai.byuh.edu/programs-of-study" target="_blank" rel="noreferrer"><h2>Programs of Study</h2></a>
-                <p>Designed and developed a custom component for a CMS-based platform (e.g., 'Brightspot') using Java, Handlebars, and LESS. University students can find their majors of interest through this module.</p>
-            </div>
-            <div className="project">
-                <a href="https://hookele.byuh.edu/transfer-evaluation-guidelines-and-matrix" target="_blank" rel="noreferrer"><img className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://hookele.byuh.edu/transfer-evaluation-guidelines-and-matrix" target="_blank" rel="noreferrer"><h2>Transfer Evaluation Matrix</h2></a>
-                <p>Created an interactive CSV table generator with Java, Handlebars, and LESS. This project helps transfer students to quickly identify eligible credits.</p>
-            </div>
-            <div className="project">
-                <a href="https://github.com/yujisatojr/submeowrine" target="_blank" rel="noreferrer"><img className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://github.com/yujisatojr/submeowrine" target="_blank" rel="noreferrer"><h2>Submeowrine</h2></a>
-                <p>Developed and released an Android mobile application using Java and Android Studio that runs a 2D shooting game.</p>
-            </div>
+      <h1>Personal Projects</h1>
+      <div className="projects-grid">
+        <div className="project">
+          <a>
+            <img
+              src={require("../assets/images/projects/digiclipse.png")}
+              className="zoom"
+              alt=""
+              width="70%"
+              style={{ display: "flex", justifyContent: "center" }}
+            />
+          </a>
+          <a>
+            <h2>DigiClipse</h2>
+          </a>
+          <p>
+            Ensure the availability of parts by automating the extraction and
+            verification of part numbers through Excel files and the Digikey
+            API, while managing human errors using <b>Pandas</b>, <b>Python</b>,{" "}
+            <b>Docker</b> and <b>APIs</b>.
+          </p>
         </div>
+        <div className="project">
+          <a>
+            <img
+              src={require("../assets/images/projects/arcade.png")}
+              className="zoom"
+              alt="thumbnail"
+              width="50%"
+              style={{ display: "flex", justifyContent: "center" }}
+            />
+          </a>
+          <a>
+            <h2>Arcade</h2>
+          </a>
+          <p>
+            Built an <b>arcade game</b> from scratch, designing both the{" "}
+            <b>hardware</b> and <b>software</b>. Programmed <b>gameplay</b>,{" "}
+            <b>UI</b>, <b>menus</b>, and <b>settings</b> while optimizing
+            performance for a smooth experience. Applied skills in{" "}
+            <b>game programming</b>, <b>Arduino</b>, <b>UI design</b>,{" "}
+            <b>controller integration</b>, and <b>electronics</b>.
+          </p>
+        </div>
+        <div className="project">
+          <a>
+            <img
+              src={require("../assets/images/projects/website.png")}
+              className="zoom"
+              alt="thumbnail"
+              width="100%"
+              style={{ display: "flex", justifyContent: "center" }}
+            />
+          </a>
+          <a>
+            <h2>Personal Website</h2>
+          </a>
+          <p>
+            Developed a <b>personal website</b> to showcase projects, skills,
+            and experiences. Implemented <b>React</b>, <b>HTML</b>, <b>CSS</b>,
+            and <b>JavaScript</b> to create a responsive and interactive
+            website.
+          </p>
+        </div>
+        <div className="project">
+          <a>
+            <img
+              src={require("../assets/images/projects/voice_translator.png")}
+              className="zoom"
+              alt="thumbnail"
+              width="70%"
+              style={{ display: "flex", justifyContent: "center" }}
+            />
+          </a>
+          <a>
+            <h2>Voice Translator</h2>
+          </a>
+          <p>
+            <p>
+              Developed a <b>Python-powered</b> voice translator that
+              converts <b>speech to text</b> using <b>OpenAI Whisper</b> and{" "}
+              <b>NumPy</b> for processing, translates the extracted text into{" "}
+              Japanese via an <b>external API</b>, and synthesizes the
+              translated text back into speech using{" "}
+              advanced speech processing techniques.
+            </p>
+          </p>
+        </div>
+      </div>
     </div>
-    );
+  );
 }
 
 export default Project;
