@@ -22,20 +22,24 @@ interface TimelineItemProps {
   icon?: React.ReactNode;
 }
 
-function TimelineItem({
-  index,
-  activeElement,
-  setActiveElement,
-  isMobile,
-  date,
-  title,
-  company,
-  city,
-  description,
-  details,
-  logo,
-  icon = <FontAwesomeIcon icon={faBriefcase} />,
-}: TimelineItemProps) {
+export default TimelineItem;
+
+function TimelineItem(
+  {
+    index,
+    activeElement,
+    setActiveElement,
+    isMobile,
+    date,
+    title,
+    company,
+    city,
+    description,
+    details,
+    logo,
+    icon = <FontAwesomeIcon icon={faBriefcase} />,
+  }: TimelineItemProps
+) {  
   const handleClick = () => {
     if (isMobile) {
       setActiveElement(activeElement === index ? null : index);
@@ -77,5 +81,3 @@ function TimelineItem({
     </VerticalTimelineElement>
   );
 }
-
-export default TimelineItem;

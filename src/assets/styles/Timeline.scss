@@ -1,3 +1,40 @@
+.dark-mode {
+  .vertical-timeline-element-content {
+    background-color: #131516 !important;
+    color: rgb(232, 230, 227) !important;
+    
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    p,
+    span,
+    li {
+      color: inherit !important;
+    }
+  }
+
+  .vertical-timeline-element-icon {
+    color: #d1cdc7 !important;
+    // outline-width: 15px;
+    // outline-color: #181a1b;
+    // outline-style: bold;
+  }
+
+  .vertical-timeline-element-content-arrow {
+    border-right-color: #303436 !important; // set the arrow to black
+  }
+
+  .vertical-timeline::before {
+    background-color: #181a1b !important; // set the timeline line to black;
+  }
+
+  .click-arrow {
+    color: rgb(232, 230, 227) !important;
+  }
+}
+
 /* Items container styling */
 .items-container {
   padding: 2rem;
