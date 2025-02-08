@@ -6,7 +6,7 @@
 
 This simple portfolio to showcase my past projects, career history, skill sets, and more.
 
-![screenshot](./src/assets//images/screenshot.png)
+![screenshot](./src/assets//images/doc/screenshot.png)
 
 ## Features
 

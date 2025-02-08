@@ -32,7 +32,7 @@ function Timeline() {
             company="Stingray"
             city="Montreal, QC, CA"
             description="Develop ETL jobs, create data marts, build new features, and investigate data issues."
-            logo={<img src={require("../../assets/images/logo_stingray.png")} alt="" />}
+            logo={<img src={require("../../assets/images/logos/stingray.png")} alt="" />}
             details={
               <>
                 <p>
@@ -66,7 +66,7 @@ function Timeline() {
             company="Shared Services Canada"
             city="Montreal, QC, CA"
             description="Data migration, automation, and data visualization."
-            logo={<img src={require("../../assets/images/logo_ssc.png")} alt="" />}
+            logo={<img src={require("../../assets/images/logos/ssc.png")} alt="" />}
             details={
               <>
                 <p>
@@ -99,7 +99,7 @@ function Timeline() {
             company="Matrox"
             city="Montreal, QC, CA"
             description="Develop new features, resolve bugs, and perform tests."
-            logo={<img src={require("../../assets/images/logo_matrox.png")} alt="" />}
+            logo={<img src={require("../../assets/images/logos/matrox.png")} alt="" />}
             details={
               <>
                 <p>
@@ -132,7 +132,7 @@ function Timeline() {
             company="Addatech"
             city="Laval, QC, CA"
             description="Provide technical support, software installation, troubleshooting, and user assistance."
-            logo={<img src={require("../../assets/images/logo_addatech.png")} alt="" />}
+            logo={<img src={require("../../assets/images/logos/addatech.png")} alt="" />}
             details={
               <>
                 <p>
