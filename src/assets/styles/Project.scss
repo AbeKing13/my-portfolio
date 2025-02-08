@@ -16,7 +16,6 @@
 }
   
 .project h2:hover {
-    text-decoration: underline;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
 }
   
@@ -44,6 +43,10 @@
       
         .projects-container .projects-grid .project {
             padding-bottom: 5%;
+        }
+
+        .zoom:hover {
+            transform: none;
         }
     }
 }
