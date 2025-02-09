@@ -30,6 +30,11 @@
         svg {
             font-size: 1.8em;
         }
+
+        &:hover {
+            color: #000471;
+            transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+        }
     }
 
     .mobile_social_icons {

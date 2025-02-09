@@ -1,12 +1,13 @@
-// .dark-mode {
-//   .flex-chips .MuiChip-outlined {
-//     background-color: #000 !important;
-//   }
+.dark-mode {
+  .chip {
+    background-color: #000 !important;
+    color: #fff !important;
 
-//   .flex-chips .MuiChip-outlined span {
-//     color: #fff !important;
-//   }
-// }
+    span {
+      color: #fff !important;
+    }
+  }
+}
 
 .skills-container {
   padding: 5% 10%;

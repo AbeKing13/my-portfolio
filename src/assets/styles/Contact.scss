@@ -1,3 +1,45 @@
+.dark-mode {
+  .contact-form {
+
+    .MuiInputBase-input {
+      color: #fff !important;
+      background-color: #131516 !important;
+    }
+
+    .MuiOutlinedInput-root {
+      background-color: #131516 !important;
+    }
+
+
+    button {
+      background-color: rgb(24, 26, 27) !important;
+      color: rgb(232, 230, 227) !important;
+
+      &:hover {
+        background-color: #ffffff !important;
+        color: #131516 !important;
+      }
+    }
+
+    fieldset {
+      background-color: rgb(24, 26, 27);
+      color: rgb(232, 230, 227);
+    }
+
+    .MuiOutlinedInput-notchedOutline {
+      border-color: #323333 !important;
+      transition: border-color 0.3s ease;
+    }
+    .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+      border-color: rgb(232, 230, 227) !important;
+    }
+  }
+
+  label {
+    color: rgb(232, 230, 227) !important;
+  }
+}
+
 .contact_wrapper svg {
   font-size: 1em;
   vertical-align: middle;
@@ -14,7 +56,7 @@
   }
 
   button:hover {
-    background-color: #5000ca;
+    background-color: #050f0b;
     color: white;
   }
 
@@ -25,7 +67,7 @@
 
 label {
   font-size: 1.2rem;
-  font-family: 'DomaineDispNar-Medium', sans-serif;
+  font-family: "DomaineDispNar-Medium", sans-serif;
 }
 
 .form-flex {
