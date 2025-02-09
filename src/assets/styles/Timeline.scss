@@ -17,10 +17,9 @@
 
   .vertical-timeline-element-icon {
     color: #d1cdc7 !important;
-    // outline-width: 15px;
-    // outline-color: #181a1b;
-    // outline-style: bold;
-  }
+    transition: transform 0.5s ease;
+    background-color: #131516 !important;
+  }  
 
   .vertical-timeline-element-content-arrow {
     border-right-color: #303436 !important; // set the arrow to black
@@ -34,6 +33,13 @@
     color: rgb(232, 230, 227) !important;
   }
 }
+
+.vertical-timeline-element-icon {
+  color: #131516 !important;
+  transition: transform 0.5s ease;
+  background-color: rgb(240, 240, 240) !important;
+}
+
 
 /* Items container styling */
 .items-container {
@@ -76,12 +82,6 @@
 
   .vertical-timeline-element-content-arrow {
     border-right: 7px solid white;
-  }
-
-  .vertical-timeline-element-icon {
-    background: #5000ca;
-    color: rgb(39, 40, 34);
-    transition: transform 0.5s ease;
   }
 
   &:hover .vertical-timeline-element-content,

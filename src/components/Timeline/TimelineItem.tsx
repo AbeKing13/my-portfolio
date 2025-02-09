@@ -52,7 +52,7 @@ function TimelineItem(
       contentStyle={{ background: "white", color: "rgb(39, 40, 34)" }}
       contentArrowStyle={{ borderRight: "7px solid white" }}
       date={date}
-      iconStyle={{ background: "#5000ca", color: "rgb(39, 40, 34)" }}
+      iconStyle={{ background: "#131516", color: "rgb(39, 40, 34)" }}
       icon={icon}
     >
       <div
