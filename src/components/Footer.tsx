@@ -10,7 +10,7 @@ function Footer() {
         <a href="https://github.com/amir-hammar" target="_blank" rel="noreferrer"><GitHubIcon/></a>
         <a href="https://www.linkedin.com/in/amirhammar/" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
       </div>
-      <p>A portfolio designed & built by Amir Hammar</p>
+      <p>A portfolio built by Amir Hammar</p>
     </footer>
   );
 }

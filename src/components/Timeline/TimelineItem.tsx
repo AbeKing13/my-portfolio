@@ -22,6 +22,8 @@ interface TimelineItemProps {
   icon?: React.ReactNode;
 }
 
+export default TimelineItem;
+
 function TimelineItem({
   index,
   activeElement,
@@ -48,8 +50,12 @@ function TimelineItem({
       contentStyle={{ background: "white", color: "rgb(39, 40, 34)" }}
       contentArrowStyle={{ borderRight: "7px solid white" }}
       date={date}
-      iconStyle={{ background: "#5000ca", color: "rgb(39, 40, 34)" }}
+      iconStyle={{ background: "#131516", color: "rgb(39, 40, 34)" }}
       icon={icon}
+      intersectionObserverProps={{
+        rootMargin: "-100px 0px -300px 0px",
+        triggerOnce: true,
+      }}
     >
       <div
         onClick={isMobile ? handleClick : undefined}
@@ -77,5 +83,3 @@ function TimelineItem({
     </VerticalTimelineElement>
   );
 }
-
-export default TimelineItem;
