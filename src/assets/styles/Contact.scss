@@ -1,90 +1,36 @@
 .dark-mode {
-  .contact-form {
-
-    .MuiInputBase-input {
+  .contact_wrapper {
+    .email-button {
+      background-color: #000 !important;
       color: #fff !important;
-      background-color: #131516 !important;
-    }
-
-    .MuiOutlinedInput-root {
-      background-color: #131516 !important;
-    }
-
-
-    button {
-      background-color: rgb(24, 26, 27) !important;
-      color: rgb(232, 230, 227) !important;
-
+      
       &:hover {
-        background-color: #ffffff !important;
-        color: #131516 !important;
+        background-color: #5000ca !important;
+        color: #fff !important;
       }
     }
+  }
+}
 
-    fieldset {
-      background-color: rgb(24, 26, 27);
-      color: rgb(232, 230, 227);
+.light-mode {
+  .contact_wrapper {
+    .email-button {
+      background-color: #ffffff !important;
+      color: #1e1d1d !important;
+      
+      &:hover {
+        background-color: #000 !important;
+        color: #fff !important;
+      }
     }
-
-    .MuiOutlinedInput-notchedOutline {
-      border-color: #323333 !important;
-      transition: border-color 0.3s ease;
-    }
-    .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
-      border-color: rgb(232, 230, 227) !important;
-    }
-  }
-
-  label {
-    color: rgb(232, 230, 227) !important;
   }
 }
 
-.contact_wrapper svg {
-  font-size: 1em;
-  vertical-align: middle;
-  margin-right: 5px;
-}
+.contact_wrapper {
+  text-align: center;
+  padding: 2rem;
 
-.contact-form {
-  padding-top: 20px;
-
-  button {
-    float: right;
-    background-color: white;
-    color: #050f0b;
+  .email-button {
+    margin-top: 2rem;
   }
-
-  button:hover {
-    background-color: #050f0b;
-    color: white;
-  }
-
-  fieldset {
-    background-color: white;
-  }
-}
-
-label {
-  font-size: 1.2rem;
-  font-family: "DomaineDispNar-Medium", sans-serif;
-}
-
-.form-flex {
-  display: flex;
-  gap: 15px;
-  padding-bottom: 15px;
-}
-
-.form-flex .MuiFormControl-root {
-  width: 100%;
-}
-
-form {
-  width: 100% !important;
-}
-
-.body-form {
-  width: 100% !important;
-  margin-bottom: 15px !important;
 }
