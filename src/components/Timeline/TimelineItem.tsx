@@ -24,22 +24,20 @@ interface TimelineItemProps {
 
 export default TimelineItem;
 
-function TimelineItem(
-  {
-    index,
-    activeElement,
-    setActiveElement,
-    isMobile,
-    date,
-    title,
-    company,
-    city,
-    description,
-    details,
-    logo,
-    icon = <FontAwesomeIcon icon={faBriefcase} />,
-  }: TimelineItemProps
-) {  
+function TimelineItem({
+  index,
+  activeElement,
+  setActiveElement,
+  isMobile,
+  date,
+  title,
+  company,
+  city,
+  description,
+  details,
+  logo,
+  icon = <FontAwesomeIcon icon={faBriefcase} />,
+}: TimelineItemProps) {
   const handleClick = () => {
     if (isMobile) {
       setActiveElement(activeElement === index ? null : index);
@@ -54,6 +52,10 @@ function TimelineItem(
       date={date}
       iconStyle={{ background: "#131516", color: "rgb(39, 40, 34)" }}
       icon={icon}
+      intersectionObserverProps={{
+        rootMargin: "-100px 0px -300px 0px",
+        triggerOnce: true,
+      }}
     >
       <div
         onClick={isMobile ? handleClick : undefined}

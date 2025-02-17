@@ -14,14 +14,15 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 
 function App() {
-    const [mode, setMode] = useState<string>('dark');
-
+    const [mode, setMode] = useState<string>(() => {
+        // Get saved mode from localStorage, default to 'dark' if none exists
+        return localStorage.getItem('colorMode') || 'dark';
+    });
+    
     const handleModeChange = () => {
-        if (mode === 'dark') {
-            setMode('light');
-        } else {
-            setMode('dark');
-        }
+        const newMode = mode === 'dark' ? 'light' : 'dark';
+        setMode(newMode);
+        localStorage.setItem('colorMode', newMode);
     }
 
     useEffect(() => {
