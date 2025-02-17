@@ -135,6 +135,7 @@ function Navigation({ parentToChild, modeChange }: any) {
             sx: {
               display: { xs: "block", sm: "none" },
               width: drawerWidth,
+              overflowY: "hidden",
               backgroundColor: mode === "light" ? "#fcfcfc" : "#0d1116",
               "& span, & p": {
                 color: mode === "light" ? "#0d1116" : "#fcfcfc",
