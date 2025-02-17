@@ -7,8 +7,9 @@ function Footer() {
   return (
     <footer>
       <div>
-        <a href="https://github.com/amir-hammar" target="_blank" rel="noreferrer"><GitHubIcon/></a>
-        <a href="https://www.linkedin.com/in/amirhammar/" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
+        <a href="https://github.com/amir-hammar" target="_blank" rel="noreferrer noopener" title="Visit my GitHub profile"><GitHubIcon/></a>
+        <a href="https://www.linkedin.com/in/amirhammar/" target="_blank" rel="noreferrer noopener" title="Visit my LinkedIn profile"><LinkedInIcon/></a>
+        <p>amirhammar2206@gmail.com</p>
       </div>
       <p>A portfolio built by Amir Hammar</p>
     </footer>

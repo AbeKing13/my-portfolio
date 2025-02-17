@@ -1,59 +1,11 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 import "../assets/styles/Contact.scss";
-import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import SendIcon from "@mui/icons-material/Send";
-import TextField from "@mui/material/TextField";
-import emailjs from "@emailjs/browser";
 
 function Contact() {
-  const [name, setName] = useState<string>("");
-  const [email, setEmail] = useState<string>("");
-  const [message, setMessage] = useState<string>("");
-
-  const [nameError, setNameError] = useState<boolean>(false);
-  const [emailError, setEmailError] = useState<boolean>(false);
-  const [messageError, setMessageError] = useState<boolean>(false);
-
-  const form = useRef();
-
-  const sendEmail = (e: any) => {
-    e.preventDefault();
-
-    setNameError(name === "");
-    setEmailError(email === "");
-    setMessageError(message === "");
-
-    /* Uncomment below if you want to enable the emailJS */
-
-    if (name !== "" && email !== "" && message !== "") {
-      const templateParams = {
-        name: name,
-        email: email,
-        message: message,
-      };
-
-      emailjs
-        .send(
-          "service_jrmf9e6",
-          "template_qclndtb",
-          templateParams,
-          "WIaYGneROYSZk63Rd"
-        )
-        .then(
-          (response: any) => {
-            console.log("SUCCESS!", response.status, response.text);
-          },
-          (error: any) => {
-            console.log("FAILED...", error);
-          }
-        );
-
-      // Clear the form fields after sending
-      setName("");
-      setEmail("");
-      setMessage("");
-    }
+  const handleEmailClick = () => {
+    window.location.href = "mailto:amirhammar2206@gmail.com";
   };
 
   return (
@@ -65,64 +17,14 @@ function Contact() {
             Got a project waiting to be realized? Let's collaborate and make it
             happen!
           </p>
-          <Box
-            ref={form}
-            component="form"
-            noValidate
-            autoComplete="off"
-            className="contact-form"
+          <Button
+            variant="contained"
+            endIcon={<SendIcon />}
+            onClick={handleEmailClick}
+            className="email-button"
           >
-            <div className="form-flex">
-              <TextField
-                required
-                id="outlined-required"
-                label="Your Name"
-                placeholder="What's your name?"
-                value={name}
-                onChange={(e) => {
-                  setName(e.target.value);
-                }}
-                error={nameError}
-                helperText={nameError ? "Please enter your name" : ""}
-              />
-              <TextField
-                required
-                id="outlined-required"
-                label="Email / Phone"
-                placeholder="How can I reach you?"
-                value={email}
-                onChange={(e) => {
-                  setEmail(e.target.value);
-                }}
-                error={emailError}
-                helperText={
-                  emailError ? "Please enter your email or phone number" : ""
-                }
-              />
-            </div>
-            <TextField
-              required
-              id="outlined-multiline-static"
-              label="Message"
-              placeholder="Send me any inquiries or questions"
-              multiline
-              rows={10}
-              className="body-form"
-              value={message}
-              onChange={(e) => {
-                setMessage(e.target.value);
-              }}
-              error={messageError}
-              helperText={messageError ? "Please enter the message" : ""}
-            />
-            <Button
-              variant="contained"
-              endIcon={<SendIcon />}
-              onClick={sendEmail}
-            >
-              Send
-            </Button>
-          </Box>
+            Send me an email
+          </Button>
         </div>
       </div>
     </div>
