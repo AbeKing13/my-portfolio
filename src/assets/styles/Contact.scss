@@ -1,12 +1,14 @@
 .dark-mode {
   .contact_wrapper {
     .email-button {
-      background-color: #000 !important;
+      background-color: #2e2d2d55 !important;
       color: #fff !important;
-      
-      &:hover {
-        background-color: #5000ca !important;
-        color: #fff !important;
+
+      @media (min-width: 769px) {
+        &:hover {
+          background-color: #5000ca !important;
+          color: #fff !important;
+        }
       }
     }
   }
@@ -17,7 +19,7 @@
     .email-button {
       background-color: #ffffff !important;
       color: #1e1d1d !important;
-      
+
       &:hover {
         background-color: #000 !important;
         color: #fff !important;
