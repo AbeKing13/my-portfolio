@@ -13,6 +13,8 @@
   background-image: url("../images/home/bg-dark.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
+
 }
 
 .about-section .content {
@@ -180,16 +182,23 @@
     }
 
     .dark-mode .about-section {
-      background-size: 70vh;
-      background-position-y: 70%;
+      background-size: 150%;
+      background-position-y: 5cm;
     }
+
+    .light-mode .about-section {
+      background-size: 250%;
+      background-position-y: 6cm;
+      background-position-x: -5cm;
+    }
+
 
     .about-section {
       padding-top: 150px;
       display: block;
       padding-left: 0px;
       padding-right: 0px;
-      min-height: 0;
+      min-height: 0;      
     }
 
     .about-section .content {
