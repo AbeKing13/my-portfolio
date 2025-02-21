@@ -24,11 +24,37 @@
   border-radius: 5px;
   transition: transform 0.2s;
   margin: 0 auto;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
-.zoom:hover {
-  transform: scale(1.05);
+.project {
+  .zoom {
+    display: flex;
+    justify-content: center;
+    object-fit: cover;
+    cursor: pointer;
+    width: 100%;
+  }
+  .thumbnail {
+    transition: opacity 0.3s ease;
+    display: flex;
+    justify-content: center;
+    object-fit: cover;
+    cursor: pointer;
+    width: 100%;
+  }
 }
+
+// video.zoom {
+//   display: flex;
+//   justify-content: center;
+//   object-fit: cover;
+//   cursor: pointer;
+//   width: 100%;
+// }
 
 .more-coming-soon {
   padding: 2rem;

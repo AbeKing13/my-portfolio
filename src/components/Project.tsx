@@ -1,24 +1,72 @@
-import React from "react";
+import { useEffect, useRef, useState } from "react";
+import { gsap } from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import "../assets/styles/Project.scss";
 
+gsap.registerPlugin(ScrollTrigger);
+
 function Project() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  // const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  useEffect(() => {
+    let playTimeout: NodeJS.Timeout;
+
+    if (videoRef.current) {
+      gsap.to(videoRef.current, {
+        scrollTrigger: {
+          trigger: videoRef.current,
+          start: "top 80%",
+          end: "bottom top",
+          onEnter: () => {
+            clearTimeout(playTimeout);
+            playTimeout = setTimeout(() => {
+              videoRef.current?.play();
+              setIsPlaying(true);
+            }, 100);
+          },
+          onLeave: () => {
+            clearTimeout(playTimeout);
+            videoRef.current?.pause();
+            setIsPlaying(false);
+          },
+          onEnterBack: () => {
+            clearTimeout(playTimeout);
+            playTimeout = setTimeout(() => {
+              videoRef.current?.play();
+              setIsPlaying(true);
+            }, 100);
+          },
+          onLeaveBack: () => {
+            clearTimeout(playTimeout);
+            videoRef.current?.pause();
+            setIsPlaying(false);
+          },
+        },
+      });
+    }
+
+    return () => {
+      clearTimeout(playTimeout);
+    };
+  });
+
   return (
     <div className="projects-container" id="projects">
       <h1>Personal Projects</h1>
       <div className="projects-grid">
         <div className="project">
-          <a>
-            <img
-              src={require("../assets/images/projects/digiclipse.png")}
-              className="zoom"
-              alt=""
-              width="80%"
-              style={{ display: "flex", justifyContent: "center" }}
-            />
-          </a>
-          <a>
+          <img
+            src={require("../assets/images/projects/digiclipse.png")}
+            className="zoom"
+            alt=""
+            width="80%"
+            style={{ display: "flex", justifyContent: "center" }}
+          />
+          <div className="project-title">
             <h2>DigiClipse</h2>
-          </a>
+          </div>
           <p>
             Ensure the availability of parts by automating the extraction and
             verification of part numbers through Excel files and the Digikey
@@ -27,18 +75,25 @@ function Project() {
           </p>
         </div>
         <div className="project">
-          <a>
+          <video
+            ref={videoRef}
+            src={require("../assets/images/projects/arcade.mp4")}
+            className="zoom"
+            poster={require("../assets/images/projects/arcade_thumbnail.png")}
+            loop
+            muted
+            playsInline
+          />
+          {!isPlaying && (
             <img
-              src={require("../assets/images/projects/arcade.png")}
-              className="zoom"
-              alt="thumbnail"
-              width="50%"
-              style={{ display: "flex", justifyContent: "center" }}
+              src={require("../assets/images/projects/arcade_thumbnail.png")}
+              className="thumbnail"
+              alt="Arcade thumbnail"
             />
-          </a>
-          <a>
+          )}
+          <div className="project-title">
             <h2>Arcade</h2>
-          </a>
+          </div>
           <p>
             Built an <b>arcade game</b> from scratch, designing both the{" "}
             <b>hardware</b> and <b>software</b>. Programmed <b>gameplay</b>,{" "}
@@ -49,18 +104,16 @@ function Project() {
           </p>
         </div>
         <div className="project">
-          <a>
-            <img
-              src={require("../assets/images/projects/aspire.png")}
-              className="zoom"
-              alt="thumbnail"
-              width="100%"
-              style={{ display: "flex", justifyContent: "center" }}
-            />
-          </a>
-          <a>
+          <img
+            src={require("../assets/images/projects/aspire.png")}
+            className="zoom"
+            alt="thumbnail"
+            width="100%"
+            style={{ display: "flex", justifyContent: "center" }}
+          />
+          <div className="project-title">
             <h2>Aspire</h2>
-          </a>
+          </div>
           <p>
             Develop a <b>voice assistant</b> named <b>Aspire</b> (still under
             development) for <b>computer control</b>. It enables users to{" "}
@@ -71,18 +124,16 @@ function Project() {
           </p>
         </div>
         <div className="project">
-          <a>
-            <img
-              src={require("../assets/images/projects/voice_translator.png")}
-              className="zoom"
-              alt="thumbnail"
-              width="100%"
-              style={{ display: "flex", justifyContent: "center" }}
-            />
-          </a>
-          <a>
+          <img
+            src={require("../assets/images/projects/voice_translator.png")}
+            className="zoom"
+            alt="thumbnail"
+            width="100%"
+            style={{ display: "flex", justifyContent: "center" }}
+          />
+          <div className="project-title">
             <h2>Voice Translator</h2>
-          </a>
+          </div>
           <p>
             <p>
               Developed a <b>Python-powered</b> voice translator that converts{" "}
@@ -94,18 +145,16 @@ function Project() {
           </p>
         </div>
         <div className="project">
-          <a>
-            <img
-              src={require("../assets/images/projects/sga.png")}
-              className="zoom"
-              alt="thumbnail"
-              width="100%"
-              style={{ display: "flex", justifyContent: "center" }}
-            />
-          </a>
-          <a>
+          <img
+            src={require("../assets/images/projects/sga.png")}
+            className="zoom"
+            alt="thumbnail"
+            width="100%"
+            style={{ display: "flex", justifyContent: "center" }}
+          />
+          <div className="project-title">
             <h2>Class Management System</h2>
-          </a>
+          </div>
           <p>
             <p>
               Developed a <b>Class Management System</b> for the <b>LOG210</b>{" "}
@@ -117,39 +166,34 @@ function Project() {
           </p>
         </div>
         <div className="project">
-          <a>
-            <img
-              src={require("../assets/images/projects/portfolio.png")}
-              className="zoom"
-              alt="thumbnail"
-              width="100%"
-              style={{ display: "flex", justifyContent: "center" }}
-            />
-          </a>
-          <a>
+          <img
+            src={require("../assets/images/projects/portfolio.png")}
+            className="zoom"
+            alt="thumbnail"
+            width="100%"
+            style={{ display: "flex", justifyContent: "center" }}
+          />
+          <div className="project-title">
             <h2>Personal Website</h2>
-          </a>
+          </div>
           <p>
             Developed a <b>personal website</b> to showcase projects, skills,
-            and experiences using <b>React</b> and <b>Node.js</b>.
-            Built with <b>TypeScript</b> on <b>HTML5</b>{" "}
-            and styled with <b>SASS</b> to ensure a robust, responsive, and
-            interactive design.
+            and experiences using <b>React</b> and <b>Node.js</b>. Built with{" "}
+            <b>TypeScript</b> on <b>HTML5</b> and styled with <b>SASS</b> to
+            ensure a robust, responsive, and interactive design.
           </p>
         </div>
         <div className="project">
-          <a>
-            <img
-              src={require("../assets/images/projects/database.png")}
-              className="zoom"
-              alt="thumbnail"
-              width="100%"
-              style={{ display: "flex", justifyContent: "center" }}
-            />
-          </a>
-          <a>
+          <img
+            src={require("../assets/images/projects/database.png")}
+            className="zoom"
+            alt="thumbnail"
+            width="100%"
+            style={{ display: "flex", justifyContent: "center" }}
+          />
+          <div className="project-title">
             <h2>Web Database Interface</h2>
-          </a>
+          </div>
           <p>
             <p>
               Set up a <b>web database interface</b> on a <b>Raspberry Pi</b>{" "}
