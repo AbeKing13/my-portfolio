@@ -37,7 +37,7 @@ function TimelineItem({
       iconStyle={{ background: "#131516", color: "rgb(39, 40, 34)" }}
       icon={icon}
       intersectionObserverProps={{
-        rootMargin: "-100px 0px -300px 0px",
+        rootMargin: "-100px 0px -200px 0px",
         triggerOnce: true,
       }}
     >

@@ -144,12 +144,6 @@
   margin-bottom: 0.25rem;
 }
 
-.vertical-timeline-element--work.in-view .vertical-timeline-element-content,
-.vertical-timeline-element--work.in-view .vertical-timeline-element-icon {
-  transform: scale(1.05);
-  transition: transform 0.5s ease;
-}
-
 @media (max-width: 768px) {
   .click-arrow {
     bottom: -40px; // move arrow further down on mobile
@@ -172,6 +166,13 @@
   .vertical-timeline-element--work:hover .vertical-timeline-element-content,
   .vertical-timeline-element--work:hover .vertical-timeline-element-icon {
     transform: none; // disable zoom on hover
+  }
+
+  .vertical-timeline-element--work {
+    .vertical-timeline-element-content {
+      transition: transform 0.3s ease-out;
+      will-change: transform;
+    }
   }
 }
 
