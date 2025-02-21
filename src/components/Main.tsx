@@ -32,20 +32,20 @@ function Main() {
           </div>
           <h1>Amir Hammar</h1>
           <div className="student-info">
-            <p>
-              Software Engineering Student
-              <a
-                href="https://www.etsmtl.ca/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src={require("../assets/images/home/ets.png")}
-                  alt="ÉTS Logo"
-                  className="ets-logo"
-                />
-              </a>
-            </p>
+            <p>Software Engineering Student</p>
+          </div>
+          <div className="school-logo">
+            <a
+              href="https://www.etsmtl.ca/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={require("../assets/images/home/ets.png")}
+                alt="ÉTS Logo"
+                className="ets-logo"
+              />
+            </a>
           </div>
           <div className="mobile_social_icons">
             <a
