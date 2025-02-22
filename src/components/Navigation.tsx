@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -25,6 +26,8 @@ const navItems = [
 ];
 
 function Navigation({ parentToChild, modeChange }: any) {
+  const { i18n, t } = useTranslation();
+
   const { mode } = parentToChild;
 
   const [mobileOpen, setMobileOpen] = useState<boolean>(false);
@@ -126,11 +129,9 @@ function Navigation({ parentToChild, modeChange }: any) {
           variant="temporary"
           open={mobileOpen}
           onClose={handleDrawerToggle}
-          ModalProps={
-            {
-              keepMounted: true
-            }
-          }
+          ModalProps={{
+            keepMounted: true,
+          }}
           PaperProps={{
             sx: {
               display: { xs: "block", sm: "none" },
@@ -146,6 +147,14 @@ function Navigation({ parentToChild, modeChange }: any) {
           {drawer}
         </Drawer>
       </nav>
+      <button
+        onClick={() =>
+          i18n.changeLanguage(i18n.language === "en" ? "fr" : "en")
+        }
+        className="language-button"
+      >
+        {i18n.language.toUpperCase()}
+      </button>
     </Box>
   );
 }
