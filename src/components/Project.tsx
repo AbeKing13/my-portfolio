@@ -1,24 +1,74 @@
-import React from "react";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import "../assets/styles/Project.scss";
 
+gsap.registerPlugin(ScrollTrigger);
+
 function Project() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+  useEffect(() => {
+    let playTimeout: NodeJS.Timeout;
+
+    if (videoRef.current) {
+      gsap.to(videoRef.current, {
+        scrollTrigger: {
+          trigger: videoRef.current,
+          start: "top 80%",
+          end: isMobile ? "bottom 15%" : "bottom 25%",
+          onEnter: () => {
+            clearTimeout(playTimeout);
+            playTimeout = setTimeout(() => {
+              videoRef.current?.play();
+            }, 100);
+          },
+          onLeave: () => {
+            clearTimeout(playTimeout);
+            videoRef.current?.pause();
+          },
+          onEnterBack: () => {
+            clearTimeout(playTimeout);
+            playTimeout = setTimeout(() => {
+              videoRef.current?.play();
+            }, 100);
+          },
+          onLeaveBack: () => {
+            clearTimeout(playTimeout);
+            videoRef.current?.pause();
+          },
+        },
+      });
+    }
+
+    return () => {
+      clearTimeout(playTimeout);
+    };
+  });
+
   return (
     <div className="projects-container" id="projects">
       <h1>Personal Projects</h1>
       <div className="projects-grid">
         <div className="project">
-          <a>
+          <div className="image-container">
             <img
-              src={require("../assets/images/projects/digiclipse.png")}
+              src={require("../assets/images/projects/digiclipse_main.jpg")}
               className="zoom"
-              alt=""
-              width="80%"
-              style={{ display: "flex", justifyContent: "center" }}
+              alt="DigiClipse interface"
+              width="50%"
             />
-          </a>
-          <a>
+            <img
+              src={require("../assets/images/projects/digiclipse_showcase.png")}
+              className="zoom"
+              alt="DigiClipse code"
+              width="50%"
+            />
+          </div>
+          <div className="project-title">
             <h2>DigiClipse</h2>
-          </a>
+          </div>
           <p>
             Ensure the availability of parts by automating the extraction and
             verification of part numbers through Excel files and the Digikey
@@ -27,18 +77,18 @@ function Project() {
           </p>
         </div>
         <div className="project">
-          <a>
-            <img
-              src={require("../assets/images/projects/arcade.png")}
-              className="zoom"
-              alt="thumbnail"
-              width="50%"
-              style={{ display: "flex", justifyContent: "center" }}
-            />
-          </a>
-          <a>
+          <video
+            ref={videoRef}
+            src={require("../assets/images/projects/arcade.mp4")}
+            className="zoom"
+            poster={require("../assets/images/projects/arcade_thumbnail.png")}
+            loop
+            muted
+            playsInline
+          />
+          <div className="project-title">
             <h2>Arcade</h2>
-          </a>
+          </div>
           <p>
             Built an <b>arcade game</b> from scratch, designing both the{" "}
             <b>hardware</b> and <b>software</b>. Programmed <b>gameplay</b>,{" "}
@@ -49,18 +99,15 @@ function Project() {
           </p>
         </div>
         <div className="project">
-          <a>
-            <img
-              src={require("../assets/images/projects/aspire.png")}
-              className="zoom"
-              alt="thumbnail"
-              width="100%"
-              style={{ display: "flex", justifyContent: "center" }}
-            />
-          </a>
-          <a>
+          <img
+            src={require("../assets/images/projects/aspire.jpg")}
+            className="zoom"
+            alt="thumbnail"
+            width="100%"
+          />
+          <div className="project-title">
             <h2>Aspire</h2>
-          </a>
+          </div>
           <p>
             Develop a <b>voice assistant</b> named <b>Aspire</b> (still under
             development) for <b>computer control</b>. It enables users to{" "}
@@ -71,90 +118,20 @@ function Project() {
           </p>
         </div>
         <div className="project">
-          <a>
-            <img
-              src={require("../assets/images/projects/voice_translator.png")}
-              className="zoom"
-              alt="thumbnail"
-              width="100%"
-              style={{ display: "flex", justifyContent: "center" }}
-            />
-          </a>
-          <a>
-            <h2>Voice Translator</h2>
-          </a>
-          <p>
-            <p>
-              Developed a <b>Python-powered</b> voice translator that converts{" "}
-              <b>speech to text</b> using <b>OpenAI Whisper</b> and <b>NumPy</b>{" "}
-              for processing, translates the extracted text into Japanese via an{" "}
-              <b>external API</b>, and synthesizes the translated text back into
-              speech using advanced speech processing techniques.
-            </p>
-          </p>
-        </div>
-        <div className="project">
-          <a>
-            <img
-              src={require("../assets/images/projects/sga.png")}
-              className="zoom"
-              alt="thumbnail"
-              width="100%"
-              style={{ display: "flex", justifyContent: "center" }}
-            />
-          </a>
-          <a>
-            <h2>Class Management System</h2>
-          </a>
-          <p>
-            <p>
-              Developed a <b>Class Management System</b> for the <b>LOG210</b>{" "}
-              course, engineered to <b>streamline</b> the management of{" "}
-              <b>courses</b>,<b>students</b>, and other{" "}
-              <b>academic activities</b>. Built with `<b>TypeScript</b>,{" "}
-              <b>Pug</b> and <b>CSS</b>.
-            </p>
-          </p>
-        </div>
-        <div className="project">
-          <a>
-            <img
-              src={require("../assets/images/projects/portfolio.png")}
-              className="zoom"
-              alt="thumbnail"
-              width="100%"
-              style={{ display: "flex", justifyContent: "center" }}
-            />
-          </a>
-          <a>
-            <h2>Personal Website</h2>
-          </a>
-          <p>
-            Developed a <b>personal website</b> to showcase projects, skills,
-            and experiences using <b>React</b> and <b>Node.js</b>.
-            Built with <b>TypeScript</b> on <b>HTML5</b>{" "}
-            and styled with <b>SASS</b> to ensure a robust, responsive, and
-            interactive design.
-          </p>
-        </div>
-        <div className="project">
-          <a>
-            <img
-              src={require("../assets/images/projects/database.png")}
-              className="zoom"
-              alt="thumbnail"
-              width="100%"
-              style={{ display: "flex", justifyContent: "center" }}
-            />
-          </a>
-          <a>
+          <img
+            src={require("../assets/images/projects/database.jpg")}
+            className="zoom"
+            alt="thumbnail"
+            width="100%"
+          />
+          <div className="project-title">
             <h2>Web Database Interface</h2>
-          </a>
+          </div>
           <p>
             <p>
               Set up a <b>web database interface</b> on a <b>Raspberry Pi</b>{" "}
               server with a <b>web interface</b> that simplifies{" "}
-              <b>displaying</b>, <b>entering</b>, and <b>manipulating data</b>.
+              <b>displaying</b>, <b>entering</b>, and <b>manipulating data</b>. 
               Leveraging <b>web development</b> best practices, the project
               integrates <b>SQL</b> capabilities with a user-friendly{" "}
               <b>user interface</b> and utilizes <b>MariaDB</b> for robust
@@ -162,8 +139,87 @@ function Project() {
             </p>
           </p>
         </div>
-        <div className="project more-coming-soon">
-          <h2>More coming soon...</h2>
+        <div className="project">
+          <img
+            src={require("../assets/images/projects/voice_translator.jpg")}
+            className="zoom"
+            alt="thumbnail"
+            width="100%"
+          />
+          <div className="project-title">
+            <h2>Voice Translator</h2>
+          </div>
+          <p>
+            <p>
+              Developed a <b>Python-powered</b> voice translator that converts{" "}
+              <b>speech to text</b> using <b>OpenAI Whisper</b> and <b>NumPy</b>{" "}
+              for processing, translates the extracted text into Japanese via an{" "}
+              <b>external API</b>, and synthesizes the translated text back into{" "}
+              <b>speech</b> using advanced speech processing techniques.
+            </p>
+          </p>
+        </div>
+        <div className="project">
+          <div className="image-container">
+            <img
+              src={require("../assets/images/projects/ssc_main.png")}
+              className="zoom main-image"
+              alt="Main project view"
+              width="100%"
+            />
+            <img
+              src={require("../assets/images/projects/ssc_settings.png")}
+              className="zoom"
+              alt="Project detail 1"
+              width="100%"
+            />
+          </div>
+          <div className="project-title">
+            <h2>Data Updater</h2>
+          </div>
+            <p>
+            <b>Automate</b> the extraction, verification, and updating of email <b>data</b> in
+            Excel based on selected dates and subjects, as part of my work at Shared Services Canada, using <b>Python</b>,{" "}
+            <b>customTkinter</b> for the <b>GUI</b>, and <b>Excel query libraries</b> for seamless
+            data integration.
+            </p>
+        </div>
+        <div className="project">
+          <img
+            src={require("../assets/images/projects/sga.png")}
+            className="zoom"
+            alt="thumbnail"
+            width="100%"
+          />
+          <div className="project-title">
+            <h2>Class Management System</h2>
+          </div>
+          <p>
+            <p>
+              Developed a <b>Class Management System</b> for the LOG210{" "}
+              course, engineered to <b>streamline</b> the management of{" "}
+              <b>courses</b>, <b>students</b>, and other{" "}
+              academic activities. Built with `<b>TypeScript</b>,{" "}
+              <b>Pug</b> and <b>CSS</b>.
+            </p>
+          </p>
+        </div>
+        <div className="project">
+          <img
+            src={require("../assets/images/projects/portfolio.png")}
+            className="zoom"
+            alt="thumbnail"
+            width="100%"
+          />
+          <div className="project-title">
+            <h2>Personal Website</h2>
+          </div>
+          <p>
+            Developed a <b>personal website</b> to showcase projects, skills, 
+            and experiences using <b>React</b> and <b>Node.js</b>. Built with{" "}
+            <b>TypeScript</b> on <b>HTML5</b> and styled with <b>SASS</b> to
+            ensure a robust, responsive, and interactive design.
+          </p>
         </div>
       </div>
     </div>

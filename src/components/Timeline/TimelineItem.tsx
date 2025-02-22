@@ -1,28 +1,12 @@
 import React from "react";
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import TimelineItemProps from "./TimelineItemProps";
 import {
   faBriefcase,
   faChevronDown,
   faChevronUp,
 } from "@fortawesome/free-solid-svg-icons";
-
-interface TimelineItemProps {
-  index: number;
-  activeElement: number | null;
-  setActiveElement: (i: number | null) => void;
-  isMobile: boolean;
-  date: string;
-  title: string;
-  company: string;
-  city: string;
-  description: string;
-  details: React.ReactNode;
-  logo?: React.ReactNode; // new prop for the company logo
-  icon?: React.ReactNode;
-}
-
-export default TimelineItem;
 
 function TimelineItem({
   index,
@@ -53,7 +37,7 @@ function TimelineItem({
       iconStyle={{ background: "#131516", color: "rgb(39, 40, 34)" }}
       icon={icon}
       intersectionObserverProps={{
-        rootMargin: "-100px 0px -300px 0px",
+        rootMargin: "-100px 0px -200px 0px",
         triggerOnce: true,
       }}
     >
@@ -83,3 +67,5 @@ function TimelineItem({
     </VerticalTimelineElement>
   );
 }
+
+export default TimelineItem;

@@ -2,7 +2,7 @@
   .vertical-timeline-element-content {
     background-color: #131516 !important;
     color: rgb(232, 230, 227) !important;
-    
+
     h1,
     h2,
     h3,
@@ -19,7 +19,7 @@
     color: #d1cdc7 !important;
     transition: transform 0.5s ease;
     background-color: #131516 !important;
-  }  
+  }
 
   .vertical-timeline-element-content-arrow {
     border-right-color: #303436 !important; // set the arrow to black
@@ -39,7 +39,6 @@
   transition: transform 0.5s ease;
   background-color: rgb(240, 240, 240) !important;
 }
-
 
 /* Items container styling */
 .items-container {
@@ -144,12 +143,6 @@
   margin-bottom: 0.25rem;
 }
 
-.vertical-timeline-element--work.in-view .vertical-timeline-element-content,
-.vertical-timeline-element--work.in-view .vertical-timeline-element-icon {
-  transform: scale(1.05);
-  transition: transform 0.5s ease;
-}
-
 @media (max-width: 768px) {
   .click-arrow {
     bottom: -40px; // move arrow further down on mobile
@@ -173,17 +166,37 @@
   .vertical-timeline-element--work:hover .vertical-timeline-element-icon {
     transform: none; // disable zoom on hover
   }
+
+  .vertical-timeline-element--work {
+    .vertical-timeline-element-content {
+      transition: transform 0.3s ease-out;
+      will-change: transform;
+    }
+  }
+
+  .company-logo {
+    right: -15px;
+    width: 35px;
+    height: 35px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
 }
 
-.company-logo {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 40px;
-  height: 40px;
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+@media (min-width: 769px) {
+  .company-logo {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
   }
 }
