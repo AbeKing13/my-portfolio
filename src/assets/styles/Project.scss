@@ -75,14 +75,16 @@
       &:hover {
         @media (min-width: 769px) {
           transform: scale(1.05);
+          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
         }
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+        
 
         & + img {
           @media (min-width: 769px) {
             transform: scale(1.05) translateY(20%);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
           }
-          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+          
         }
       }
     }
@@ -99,8 +101,8 @@
       &:hover {
         @media (min-width: 769px) {
           transform: scale(1.05) translateY(15%);
+          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
         }
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
       }
     }
   }
