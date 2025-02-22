@@ -179,7 +179,7 @@ function Project() {
           </div>
             <p>
             <b>Automate</b> the extraction, verification, and updating of email <b>data</b> in
-            Excel based on selected dates and subjects, using <b>Python</b>,{" "}
+            Excel based on selected dates and subjects, as part of my work at Shared Services Canada, using <b>Python</b>,{" "}
             <b>customTkinter</b> for the <b>GUI</b>, and <b>Excel query libraries</b> for seamless
             data integration.
             </p>
