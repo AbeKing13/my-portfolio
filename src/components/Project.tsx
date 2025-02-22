@@ -131,7 +131,7 @@ function Project() {
             <p>
               Set up a <b>web database interface</b> on a <b>Raspberry Pi</b>{" "}
               server with a <b>web interface</b> that simplifies{" "}
-              <b>displaying</b>, <b>entering</b>, and <b>manipulating data</b>.
+              <b>displaying</b>, <b>entering</b>, and <b>manipulating data</b>. 
               Leveraging <b>web development</b> best practices, the project
               integrates <b>SQL</b> capabilities with a user-friendly{" "}
               <b>user interface</b> and utilizes <b>MariaDB</b> for robust
@@ -154,8 +154,8 @@ function Project() {
               Developed a <b>Python-powered</b> voice translator that converts{" "}
               <b>speech to text</b> using <b>OpenAI Whisper</b> and <b>NumPy</b>{" "}
               for processing, translates the extracted text into Japanese via an{" "}
-              <b>external API</b>, and synthesizes the translated text back into
-              speech using advanced speech processing techniques.
+              <b>external API</b>, and synthesizes the translated text back into{" "}
+              <b>speech</b> using advanced speech processing techniques.
             </p>
           </p>
         </div>
@@ -177,10 +177,12 @@ function Project() {
           <div className="project-title">
             <h2>Data Updater</h2>
           </div>
-          <p>
-            Project description with <b>bold keywords</b> and{" "}
-            <b>technology highlights</b>.
-          </p>
+            <p>
+            <b>Automate</b> the extraction, verification, and updating of email <b>data</b> in
+            Excel based on selected dates and subjects, using <b>Python</b>, 
+            <b>customTkinter</b> for the <b>GUI</b>, and <b>Excel query libraries</b> for seamless
+            data integration.
+            </p>
         </div>
         <div className="project">
           <img
@@ -194,10 +196,10 @@ function Project() {
           </div>
           <p>
             <p>
-              Developed a <b>Class Management System</b> for the <b>LOG210</b>{" "}
+              Developed a <b>Class Management System</b> for the LOG210{" "}
               course, engineered to <b>streamline</b> the management of{" "}
-              <b>courses</b>,<b>students</b>, and other{" "}
-              <b>academic activities</b>. Built with `<b>TypeScript</b>,{" "}
+              <b>courses</b>, <b>students</b>, and other{" "}
+              academic activities. Built with `<b>TypeScript</b>,{" "}
               <b>Pug</b> and <b>CSS</b>.
             </p>
           </p>
@@ -213,7 +215,7 @@ function Project() {
             <h2>Personal Website</h2>
           </div>
           <p>
-            Developed a <b>personal website</b> to showcase projects, skills,
+            Developed a <b>personal website</b> to showcase projects, skills, 
             and experiences using <b>React</b> and <b>Node.js</b>. Built with{" "}
             <b>TypeScript</b> on <b>HTML5</b> and styled with <b>SASS</b> to
             ensure a robust, responsive, and interactive design.
