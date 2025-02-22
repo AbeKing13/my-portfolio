@@ -37,36 +37,93 @@
     object-fit: cover;
     cursor: pointer;
     width: 100%;
-  }
-  .thumbnail {
-    transition: opacity 0.3s ease;
-    display: flex;
-    justify-content: center;
-    object-fit: cover;
-    cursor: pointer;
-    width: 100%;
+
+    &:nth-child(odd) {
+      .zoom {
+        &:hover {
+          transform: scale(1.05) translateX(15px);
+          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5); // Increased shadow size and opacity
+        }
+      }
+    }
+
+    &:nth-child(even) {
+      .zoom {
+        &:hover {
+          transform: scale(1.05) translateX(-15px);
+          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+        }
+      }
+    }
   }
 }
 
-// video.zoom {
-//   display: flex;
-//   justify-content: center;
-//   object-fit: cover;
-//   cursor: pointer;
-//   width: 100%;
-// }
+.image-container {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
 
-.more-coming-soon {
-  padding: 2rem;
-  border-radius: 8px;
+  img {
+    border-radius: 5px;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+
+    &:first-child {
+      width: 100% !important;
+      display: block;
+
+      &:hover {
+        @media (min-width: 769px) {
+          transform: scale(1.05);
+        }
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+
+        & + img {
+          @media (min-width: 769px) {
+            transform: scale(1.05) translateY(20%);
+          }
+          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+        }
+      }
+    }
+
+    &:last-child {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 30% !important;
+      transform: translateY(15%);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      z-index: 2;
+
+      &:hover {
+        @media (min-width: 769px) {
+          transform: scale(1.05) translateY(15%);
+        }
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+}
+
+.vertical-image-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
 
-  h2 {
-    font-size: 3rem;
-    margin: 0;
+  img {
+    width: 70% !important;
+    margin: 0 auto;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    border-radius: 5px;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    }
   }
 }
 
@@ -88,6 +145,16 @@
 
     .zoom:hover {
       transform: none;
+    }
+
+    .image-container {
+      &:hover {
+        transform: none;
+        box-shadow: none;
+      }
+      img:last-child {
+        width: 40% !important;
+      }
     }
   }
 }

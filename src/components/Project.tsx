@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import "../assets/styles/Project.scss";
@@ -7,8 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 function Project() {
   const videoRef = useRef<HTMLVideoElement>(null);
-  // const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
   useEffect(() => {
     let playTimeout: NodeJS.Timeout;
@@ -18,30 +17,26 @@ function Project() {
         scrollTrigger: {
           trigger: videoRef.current,
           start: "top 80%",
-          end: "bottom top",
+          end: isMobile ? "bottom 15%" : "bottom 25%",
           onEnter: () => {
             clearTimeout(playTimeout);
             playTimeout = setTimeout(() => {
               videoRef.current?.play();
-              setIsPlaying(true);
             }, 100);
           },
           onLeave: () => {
             clearTimeout(playTimeout);
             videoRef.current?.pause();
-            setIsPlaying(false);
           },
           onEnterBack: () => {
             clearTimeout(playTimeout);
             playTimeout = setTimeout(() => {
               videoRef.current?.play();
-              setIsPlaying(true);
             }, 100);
           },
           onLeaveBack: () => {
             clearTimeout(playTimeout);
             videoRef.current?.pause();
-            setIsPlaying(false);
           },
         },
       });
@@ -57,13 +52,20 @@ function Project() {
       <h1>Personal Projects</h1>
       <div className="projects-grid">
         <div className="project">
-          <img
-            src={require("../assets/images/projects/digiclipse.png")}
-            className="zoom"
-            alt=""
-            width="80%"
-            style={{ display: "flex", justifyContent: "center" }}
-          />
+          <div className="image-container">
+            <img
+              src={require("../assets/images/projects/digiclipse_main.jpg")}
+              className="zoom"
+              alt="DigiClipse interface"
+              width="50%"
+            />
+            <img
+              src={require("../assets/images/projects/digiclipse_showcase.png")}
+              className="zoom"
+              alt="DigiClipse code"
+              width="50%"
+            />
+          </div>
           <div className="project-title">
             <h2>DigiClipse</h2>
           </div>
@@ -84,13 +86,6 @@ function Project() {
             muted
             playsInline
           />
-          {!isPlaying && (
-            <img
-              src={require("../assets/images/projects/arcade_thumbnail.png")}
-              className="thumbnail"
-              alt="Arcade thumbnail"
-            />
-          )}
           <div className="project-title">
             <h2>Arcade</h2>
           </div>
@@ -105,11 +100,10 @@ function Project() {
         </div>
         <div className="project">
           <img
-            src={require("../assets/images/projects/aspire.png")}
+            src={require("../assets/images/projects/aspire.jpg")}
             className="zoom"
             alt="thumbnail"
             width="100%"
-            style={{ display: "flex", justifyContent: "center" }}
           />
           <div className="project-title">
             <h2>Aspire</h2>
@@ -125,11 +119,32 @@ function Project() {
         </div>
         <div className="project">
           <img
-            src={require("../assets/images/projects/voice_translator.png")}
+            src={require("../assets/images/projects/database.jpg")}
             className="zoom"
             alt="thumbnail"
             width="100%"
-            style={{ display: "flex", justifyContent: "center" }}
+          />
+          <div className="project-title">
+            <h2>Web Database Interface</h2>
+          </div>
+          <p>
+            <p>
+              Set up a <b>web database interface</b> on a <b>Raspberry Pi</b>{" "}
+              server with a <b>web interface</b> that simplifies{" "}
+              <b>displaying</b>, <b>entering</b>, and <b>manipulating data</b>.
+              Leveraging <b>web development</b> best practices, the project
+              integrates <b>SQL</b> capabilities with a user-friendly{" "}
+              <b>user interface</b> and utilizes <b>MariaDB</b> for robust
+              database management.
+            </p>
+          </p>
+        </div>
+        <div className="project">
+          <img
+            src={require("../assets/images/projects/voice_translator.jpg")}
+            className="zoom"
+            alt="thumbnail"
+            width="100%"
           />
           <div className="project-title">
             <h2>Voice Translator</h2>
@@ -145,12 +160,34 @@ function Project() {
           </p>
         </div>
         <div className="project">
+          <div className="image-container">
+            <img
+              src={require("../assets/images/projects/ssc_main.png")}
+              className="zoom main-image"
+              alt="Main project view"
+              width="100%"
+            />
+            <img
+              src={require("../assets/images/projects/ssc_settings.png")}
+              className="zoom"
+              alt="Project detail 1"
+              width="100%"
+            />
+          </div>
+          <div className="project-title">
+            <h2>Data Updater</h2>
+          </div>
+          <p>
+            Project description with <b>bold keywords</b> and{" "}
+            <b>technology highlights</b>.
+          </p>
+        </div>
+        <div className="project">
           <img
             src={require("../assets/images/projects/sga.png")}
             className="zoom"
             alt="thumbnail"
             width="100%"
-            style={{ display: "flex", justifyContent: "center" }}
           />
           <div className="project-title">
             <h2>Class Management System</h2>
@@ -171,7 +208,6 @@ function Project() {
             className="zoom"
             alt="thumbnail"
             width="100%"
-            style={{ display: "flex", justifyContent: "center" }}
           />
           <div className="project-title">
             <h2>Personal Website</h2>
@@ -182,32 +218,6 @@ function Project() {
             <b>TypeScript</b> on <b>HTML5</b> and styled with <b>SASS</b> to
             ensure a robust, responsive, and interactive design.
           </p>
-        </div>
-        <div className="project">
-          <img
-            src={require("../assets/images/projects/database.png")}
-            className="zoom"
-            alt="thumbnail"
-            width="100%"
-            style={{ display: "flex", justifyContent: "center" }}
-          />
-          <div className="project-title">
-            <h2>Web Database Interface</h2>
-          </div>
-          <p>
-            <p>
-              Set up a <b>web database interface</b> on a <b>Raspberry Pi</b>{" "}
-              server with a <b>web interface</b> that simplifies{" "}
-              <b>displaying</b>, <b>entering</b>, and <b>manipulating data</b>.
-              Leveraging <b>web development</b> best practices, the project
-              integrates <b>SQL</b> capabilities with a user-friendly{" "}
-              <b>user interface</b> and utilizes <b>MariaDB</b> for robust
-              database management.
-            </p>
-          </p>
-        </div>
-        <div className="project more-coming-soon">
-          <h2>More coming soon...</h2>
         </div>
       </div>
     </div>
