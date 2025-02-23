@@ -47,6 +47,12 @@ function Timeline() {
                 alt=""
               />
             }
+            icon={
+              <img
+                src={require("../../assets/images/logos/stingray.png")}
+                alt=""
+              />
+            }
             details={
               <>
                 <p>

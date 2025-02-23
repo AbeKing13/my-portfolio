@@ -19,7 +19,7 @@ function TimelineItem({
   city,
   details,
   logo,
-  icon = <FontAwesomeIcon icon={faBriefcase} />,
+  // icon = <FontAwesomeIcon icon={faBriefcase} />,
 }: TimelineItemProps) {
   const handleClick = () => {
     if (isMobile) {
@@ -33,8 +33,8 @@ function TimelineItem({
       contentStyle={{ background: "white", color: "rgb(39, 40, 34)" }}
       contentArrowStyle={{ borderRight: "7px solid white" }}
       date={date}
-      iconStyle={{ background: "#131516", color: "rgb(39, 40, 34)" }}
-      icon={icon}
+      // iconStyle={{ background: "#131516", color: "rgb(39, 40, 34)" }}
+      // icon={icon}
       intersectionObserverProps={{
         rootMargin: "-100px 0px -200px 0px",
         triggerOnce: true,
