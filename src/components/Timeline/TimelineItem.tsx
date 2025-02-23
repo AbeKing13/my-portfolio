@@ -17,7 +17,6 @@ function TimelineItem({
   title,
   company,
   city,
-  description,
   details,
   logo,
   icon = <FontAwesomeIcon icon={faBriefcase} />,
@@ -52,7 +51,6 @@ function TimelineItem({
         <h3 className="vertical-timeline-element-title">{title}</h3>
         <h4 className="vertical-timeline-element-company">{company}</h4>
         <h5 className="vertical-timeline-element-city">{city}</h5>
-        <p>{description}</p>
         <div className="click-arrow">
           <FontAwesomeIcon
             icon={activeElement === index ? faChevronUp : faChevronDown}

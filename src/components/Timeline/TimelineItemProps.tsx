@@ -9,7 +9,6 @@ interface TimelineItemProps {
   title: string;
   company: string;
   city: string;
-  description: string;
   details: React.ReactNode;
   logo?: React.ReactNode;
   icon?: React.ReactNode;

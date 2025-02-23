@@ -1,4 +1,4 @@
-import { Suspense, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import {
   Main,
   Expertise,
@@ -10,14 +10,19 @@ import {
 import Timeline from "./components/Timeline/Timeline";
 import FadeIn from "./components/FadeIn";
 import "./index.scss";
-import "./i18n";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import i18n from "./i18n";
 
 function App() {
   const [mode, setMode] = useState<string>(() => {
     // Get saved mode from localStorage, default to 'dark' if none exists
     return localStorage.getItem("colorMode") || "dark";
   });
+
+  const handleLanguageChange = (lang: string) => {
+    i18n.changeLanguage(lang);
+    localStorage.setItem("language", lang);
+  };
 
   const handleModeChange = () => {
     const newMode = mode === "dark" ? "light" : "dark";
@@ -30,14 +35,17 @@ function App() {
   }, []);
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
       <Router>
         <div
           className={`main-container ${
             mode === "dark" ? "dark-mode" : "light-mode"
           }`}
         >
-          <Navigation parentToChild={{ mode }} modeChange={handleModeChange} />
+          <Navigation
+          parentToChild={{ mode }}
+          modeChange={handleModeChange}
+          onLanguageChange={handleLanguageChange}
+          />
           <FadeIn transitionDuration={700}>
             <Main />
             <Expertise />
@@ -51,7 +59,6 @@ function App() {
           </Routes>
         </div>
       </Router>
-    </Suspense>
   );
 }
 

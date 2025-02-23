@@ -60,6 +60,12 @@
   svg {
     height: 15px !important;
   }
+
+  @media (min-width: 768px) {
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
 }
 
 .flex-chips {
@@ -74,6 +80,7 @@
 
 .flex-chips .MuiChip-root {
   margin-right: 0.5em;
+  cursor: pointer;
 }
 
 .flex-chips .MuiChip-outlined {

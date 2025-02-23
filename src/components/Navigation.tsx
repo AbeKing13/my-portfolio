@@ -14,26 +14,27 @@ import List from "@mui/material/List";
 import ListIcon from "@mui/icons-material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 
 const drawerWidth = 240;
-const navItems = [
-  ["Expertise", "expertise"],
-  ["History", "history"],
-  ["Projects", "projects"],
-  ["Contact", "contact"],
-];
+
 
 function Navigation({ parentToChild, modeChange }: any) {
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
 
   const { mode } = parentToChild;
 
   const [mobileOpen, setMobileOpen] = useState<boolean>(false);
   const [scrolled, setScrolled] = useState<boolean>(false);
+
+  const navItems = [
+    [t("navigation.expertise"), "expertise"],
+    [t("navigation.career"), "history"],
+    [t("navigation.projects"), "projects"],
+    [t("navigation.contact"), "contact"],
+  ];
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);

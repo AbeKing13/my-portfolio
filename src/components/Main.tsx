@@ -3,8 +3,11 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import "../assets/styles/Main.scss";
 import avatar from "../assets/images/home/avatar_circle.jpeg";
+import { useTranslation } from "react-i18next";
 
 function Main() {
+  const { t } = useTranslation();
+  
   return (
     <div className="container">
       <div className="about-section">
@@ -17,7 +20,7 @@ function Main() {
               href="https://github.com/amir-hammar"
               target="_blank"
               rel="noreferrer noopener"
-              title="Visit my GitHub profile"
+              title="GitHub"
             >
               <GitHubIcon />
             </a>
@@ -25,14 +28,14 @@ function Main() {
               href="https://www.linkedin.com/in/amirhammar/"
               target="_blank"
               rel="noreferrer noopener"
-              title="Visit my LinkedIn profile"
+              title="LinkedIn"
             >
               <LinkedInIcon />
             </a>
           </div>
           <h1>Amir Hammar</h1>
           <div className="student-info">
-            <p>Software Engineering Student</p>
+            <p>{t("main.role")}</p>
           </div>
           <div className="school-logo">
             <a
@@ -52,7 +55,7 @@ function Main() {
               href="https://github.com/amir-hammar"
               target="_blank"
               rel="noreferrer noopener"
-              title="Visit my GitHub profile"
+              title="GitHub"
             >
               <GitHubIcon />
             </a>
@@ -60,7 +63,7 @@ function Main() {
               href="https://www.linkedin.com/in/amirhammar/"
               target="_blank"
               rel="noreferrer noopener"
-              title="Visit my LinkedIn profile"
+              title="LinkedIn"
             >
               <LinkedInIcon />
             </a>
