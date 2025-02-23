@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import Divider from "@mui/material/Divider";
+import LanguageIcon from "@mui/icons-material/Language";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
 import LightModeIcon from "@mui/icons-material/LightMode";
@@ -17,18 +19,22 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 
 const drawerWidth = 240;
-const navItems = [
-  ["Expertise", "expertise"],
-  ["History", "history"],
-  ["Projects", "projects"],
-  ["Contact", "contact"],
-];
+
 
 function Navigation({ parentToChild, modeChange }: any) {
+  const { i18n, t } = useTranslation();
+
   const { mode } = parentToChild;
 
   const [mobileOpen, setMobileOpen] = useState<boolean>(false);
   const [scrolled, setScrolled] = useState<boolean>(false);
+
+  const navItems = [
+    [t("navigation.expertise"), "expertise"],
+    [t("navigation.career"), "history"],
+    [t("navigation.projects"), "projects"],
+    [t("navigation.contact"), "contact"],
+  ];
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -58,6 +64,16 @@ function Navigation({ parentToChild, modeChange }: any) {
       console.error('Element with id "expertise" not found'); // Debugging: Log error if element is not found
     }
   };
+
+  const LanguageButton = () => (
+    <Button
+      onClick={() => i18n.changeLanguage(i18n.language === "en" ? "fr" : "en")}
+      className="language-button"
+      startIcon={<LanguageIcon />}
+    >
+      {i18n.language === "en" ? "FR" : "EN"}
+    </Button>
+  );
 
   const drawer = (
     <Box
@@ -119,6 +135,7 @@ function Navigation({ parentToChild, modeChange }: any) {
               </Button>
             ))}
           </Box>
+          <LanguageButton />
         </Toolbar>
       </AppBar>
       <nav>
@@ -126,11 +143,9 @@ function Navigation({ parentToChild, modeChange }: any) {
           variant="temporary"
           open={mobileOpen}
           onClose={handleDrawerToggle}
-          ModalProps={
-            {
-              keepMounted: true
-            }
-          }
+          ModalProps={{
+            keepMounted: true,
+          }}
           PaperProps={{
             sx: {
               display: { xs: "block", sm: "none" },

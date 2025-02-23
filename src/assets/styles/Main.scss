@@ -1,3 +1,40 @@
+.language-button {
+  background: none !important; // Override MUI default
+  border: 1px solid #fff !important;
+  color: #fff !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: 4px !important;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: unset !important; // Override MUI default width
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 768px) {
+    padding: 0.3rem 0.8rem !important;
+    font-size: 0.9rem !important;
+  }
+}
+
+.light-mode .language-button {
+  border-color: #000 !important;
+  color: #000 !important;
+
+  &:hover {
+    @media (min-width: 768px) {
+      background: rgba(0, 0, 0, 0.1) !important;
+    }
+
+    @media (max-width: 768px) {
+      transform: none;
+      
+    }
+  }
+}
+
 .dark-mode .about-section {
   background-color: rgba(0, 0, 0, 0.2);
 }

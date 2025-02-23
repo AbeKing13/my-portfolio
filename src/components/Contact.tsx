@@ -2,8 +2,10 @@ import React from "react";
 import "../assets/styles/Contact.scss";
 import Button from "@mui/material/Button";
 import SendIcon from "@mui/icons-material/Send";
+import { useTranslation } from "react-i18next";
 
 function Contact() {
+  const { t } = useTranslation();
   const handleEmailClick = () => {
     window.location.href = "mailto:amirhammar2206@gmail.com";
   };
@@ -12,10 +14,9 @@ function Contact() {
     <div id="contact">
       <div className="items-container">
         <div className="contact_wrapper">
-          <h1>Contact Me</h1>
+          <h1>{t("contact.title")}</h1>
           <p>
-            Got a project waiting to be realized? Let's collaborate and make it
-            happen!
+            {t("contact.description")}
           </p>
           <Button
             variant="contained"
@@ -23,7 +24,7 @@ function Contact() {
             onClick={handleEmailClick}
             className="email-button"
           >
-            Send me an email
+            {t("contact.button")}
           </Button>
         </div>
       </div>

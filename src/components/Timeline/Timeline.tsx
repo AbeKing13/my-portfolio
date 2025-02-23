@@ -1,13 +1,23 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { VerticalTimeline } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import "../../assets/styles/Timeline.scss";
 import TimelineItem from "./TimelineItem";
-
+import { Chip } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
 function Timeline() {
+  const { t } = useTranslation();
   const [activeElement, setActiveElement] = useState<number | null>(null);
   const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth <= 768);
+
+  const renderTechStack = (technologies: string[]) => (
+    <div className="tech-stack">
+      {technologies.map((tech, index) => (
+        <Chip key={index} label={tech} className="tech-chip" size="small" />
+      ))}
+    </div>
+  );
 
   useEffect(() => {
     const handleResize = () => {
@@ -20,38 +30,43 @@ function Timeline() {
   return (
     <div id="history">
       <div className="items-container">
-        <h1>Career History</h1>
+        <h1>{t("career.title")}</h1>
         <VerticalTimeline>
           <TimelineItem
             index={0}
             activeElement={activeElement}
             setActiveElement={setActiveElement}
             isMobile={isMobile}
-            date="Jan 2025 - Present"
-            title="Software Developer Intern"
-            company="Stingray"
-            city="Montreal, QC, CA"
-            description="Develop ETL jobs, create data marts, build new features, and investigate data issues."
-            logo={<img src={require("../../assets/images/logos/stingray.png")} alt="" />}
+            date={t("career.stingray.date")}
+            title={t("career.stingray.title")}
+            company={t("career.stingray.company")}
+            city={t("career.stingray.city")}
+            logo={
+              <img
+                src={require("../../assets/images/logos/stingray.png")}
+                alt=""
+              />
+            }
             details={
               <>
                 <p>
-                  <strong>Tasks:</strong>
+                  <strong>{t("career.stingray.tasks.title")}:</strong>
                 </p>
                 <ul>
-                  <li>Develop ETL jobs</li>
-                  <li>Create data marts</li>
-                  <li>Build new features</li>
-                  <li>Investigate data issues</li>
+                  {(t("career.stingray.tasks.list", { returnObjects: true }) as string[]).map(
+                    (task: string, index: number) => (
+                      <li key={index}>{task}</li>
+                    )
+                  )}
                 </ul>
                 <p>
-                  <strong>Technologies:</strong>
+                  <strong>{t("career.stingray.technologies.title")}:</strong>
                 </p>
-                <ul>
-                  <li>Python</li>
-                  <li>SQL</li>
-                  <li>React</li>
-                </ul>
+                {renderTechStack(
+                  t("career.stingray.technologies.stack", {
+                    returnObjects: true,
+                  })
+                )}
               </>
             }
           />
@@ -61,30 +76,33 @@ function Timeline() {
             activeElement={activeElement}
             setActiveElement={setActiveElement}
             isMobile={isMobile}
-            date="May 2024 - Dec 2024"
-            title="Data Analyst"
-            company="Shared Services Canada"
-            city="Montreal, QC, CA"
-            description="Data migration, automation, and data visualization."
-            logo={<img src={require("../../assets/images/logos/ssc.png")} alt="" />}
+            date={t("career.ssc.date")}
+            title={t("career.ssc.title")}
+            company={t("career.ssc.company")}
+            city={t("career.ssc.city")}
+            logo={
+              <img src={require("../../assets/images/logos/ssc.png")} alt="" />
+            }
             details={
               <>
                 <p>
-                  <strong>Tasks:</strong>
+                  <strong>{t("career.ssc.tasks.title")}:</strong>
                 </p>
                 <ul>
-                  <li>Data migration</li>
-                  <li>Automation</li>
-                  <li>Data visualization</li>
+                  {(t("career.ssc.tasks.list", { returnObjects: true }) as string[]).map(
+                    (task: string, index: number) => (
+                      <li key={index}>{task}</li>
+                    )
+                  )}
                 </ul>
                 <p>
-                  <strong>Technologies:</strong>
+                  <strong>{t("career.ssc.technologies.title")}:</strong>
                 </p>
-                <ul>
-                  <li>Python</li>
-                  <li>SQL</li>
-                  <li>Tableau</li>
-                </ul>
+                {renderTechStack(
+                  t("career.ssc.technologies.stack", {
+                    returnObjects: true,
+                  })
+                )}
               </>
             }
           />
@@ -94,30 +112,36 @@ function Timeline() {
             activeElement={activeElement}
             setActiveElement={setActiveElement}
             isMobile={isMobile}
-            date="Jan 2023 - Aug 2023"
-            title="R&D Technician"
-            company="Matrox"
-            city="Montreal, QC, CA"
-            description="Develop new features, resolve bugs, and perform tests."
-            logo={<img src={require("../../assets/images/logos/matrox.png")} alt="" />}
+            date={t("career.matrox.date")}
+            title={t("career.matrox.title")}
+            company={t("career.matrox.company")}
+            city={t("career.matrox.city")}
+            logo={
+              <img
+                src={require("../../assets/images/logos/matrox.png")}
+                alt=""
+              />
+            }
             details={
               <>
                 <p>
-                  <strong>Tasks:</strong>
+                  <strong>{t("career.matrox.tasks.title")}:</strong>
                 </p>
                 <ul>
-                  <li>Develop new features</li>
-                  <li>Bug resolution</li>
-                  <li>Conduct tests &amp; quality assurance</li>
+                  {(t("career.matrox.tasks.list", { returnObjects: true }) as string[]).map(
+                    (task: string, index: number) => (
+                      <li key={index}>{task}</li>
+                    )
+                  )}
                 </ul>
                 <p>
-                  <strong>Technologies:</strong>
+                  <strong>{t("career.matrox.technologies.title")}:</strong>
                 </p>
-                <ul>
-                  <li>C/C++</li>
-                  <li>Python</li>
-                  <li>Automation Tools</li>
-                </ul>
+                {renderTechStack(
+                  t("career.matrox.technologies.stack", {
+                    returnObjects: true,
+                  })
+                )}
               </>
             }
           />
@@ -127,23 +151,36 @@ function Timeline() {
             activeElement={activeElement}
             setActiveElement={setActiveElement}
             isMobile={isMobile}
-            date="June 2022 - Aug 2022"
-            title="Technical Support Technician"
-            company="Addatech"
-            city="Laval, QC, CA"
-            description="Provide technical support, software installation, troubleshooting, and user assistance."
-            logo={<img src={require("../../assets/images/logos/addatech.png")} alt="" />}
+            date={t("career.addatech.date")}
+            title={t("career.addatech.title")}
+            company={t("career.addatech.company")}
+            city={t("career.addatech.city")}
+            logo={
+              <img
+                src={require("../../assets/images/logos/addatech.png")}
+                alt=""
+              />
+            }
             details={
               <>
                 <p>
-                  <strong>Tasks:</strong>
+                  <strong>{t("career.addatech.tasks.title")}:</strong>
                 </p>
                 <ul>
-                  <li>Technical support</li>
-                  <li>Software installation</li>
-                  <li>Troubleshooting issues</li>
-                  <li>User assistance</li>
+                  {(t("career.addatech.tasks.list", { returnObjects: true }) as string[]).map(
+                    (task: string, index: number) => (
+                      <li key={index}>{task}</li>
+                    )
+                  )}
                 </ul>
+                <p>
+                  <strong>{t("career.addatech.technologies.title")}:</strong>
+                </p>
+                {renderTechStack(
+                  t("career.addatech.technologies.stack", {
+                    returnObjects: true,
+                  })
+                )}
               </>
             }
           />
