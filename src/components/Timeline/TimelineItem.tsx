@@ -18,8 +18,7 @@ function TimelineItem({
   company,
   city,
   details,
-  logo,
-  icon = <FontAwesomeIcon icon={faBriefcase} />,
+  logo
 }: TimelineItemProps) {
   const handleClick = () => {
     if (isMobile) {
@@ -33,12 +32,19 @@ function TimelineItem({
       contentStyle={{ background: "white", color: "rgb(39, 40, 34)" }}
       contentArrowStyle={{ borderRight: "7px solid white" }}
       date={date}
-      iconStyle={{ background: "#131516", color: "rgb(39, 40, 34)" }}
-      icon={icon}
+      iconStyle={{ 
+        background: "white", 
+        color: "rgb(39, 40, 34)",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: "2px"
+      }}
       intersectionObserverProps={{
         rootMargin: "-100px 0px -200px 0px",
         triggerOnce: true,
       }}
+      icon={logo ? logo : <FontAwesomeIcon icon={faBriefcase} />}
     >
       <div
         onClick={isMobile ? handleClick : undefined}
@@ -47,7 +53,6 @@ function TimelineItem({
         className={isMobile ? "mobile-clickable" : "hoverable"}
       >
         {/* Display company logo in the top-right corner if provided */}
-        {logo && <div className="company-logo">{logo}</div>}
         <h3 className="vertical-timeline-element-title">{title}</h3>
         <h4 className="vertical-timeline-element-company">{company}</h4>
         <h5 className="vertical-timeline-element-city">{city}</h5>

@@ -1,3 +1,185 @@
+:root {
+  --hue: 223;
+  --primary: hsl(var(--hue), 90%, 50%);
+  --trans-dur: 0.6s;
+  --trans-timing: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.theme-toggle-button {
+  position: fixed !important;
+  bottom: 20px !important;
+  right: 20px !important;
+  z-index: 1000 !important;
+  justify-content: space-between;
+  padding: 8px !important;
+  border-radius: 30px !important;
+  border: 2px solid #fff !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 60px !important;
+  height: 32px !important;
+  display: flex !important;
+  align-items: center !important;
+  background: rgba(0, 0, 0, 0.2) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+
+  // Input styling
+  .switch__input {
+    justify-content: space-between;
+    background-color: hsl(0, 0%, 100%);
+    background: transparent !important;
+    border-radius: 0.75em;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    -webkit-appearance: none;
+    appearance: none;
+    transition: background-color var(--trans-dur), box-shadow var(--trans-dur);
+  }
+
+  // Inner sliding background
+  .switch__inner {
+    border-radius: 0.5em;
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    width: 2.25em;
+    height: 1em;
+
+    &:before {
+      background-color: var(--primary);
+      // background-color: transparent;
+      border-radius: inherit;
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      transition: transform var(--trans-dur) var(--trans-timing);
+      transform: translateX(-1.25em);
+    }
+  }
+
+  // Icons container
+  .switch__inner-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    outline: transparent;
+    top: 0.30em;
+    left: 0.46em;
+    width: 2.25em;
+    height: 1em;
+    pointer-events: none;
+    padding: 0 0.125em;
+
+    // Individual icons
+    .switch__icon {
+      position: relative;
+      width: 0.75em;
+      height: 0.75em;
+      transition: transform var(--trans-dur) var(--trans-timing),
+        opacity var(--trans-dur) var(--trans-timing);
+      color: #fff;
+
+      // Light icon
+      &:first-child {
+        transform: translateX(0);
+        order: 1;
+        opacity: 1;
+      }
+
+      // Dark icon
+      &:nth-child(2) {
+        transform: translateX(0);
+        order: 2;
+        opacity: 0.5;
+      }
+    }
+  }
+
+  // Dark mode styles
+  &.dark {
+    .switch__input {
+      background-color: hsl(var(--hue), 10%, 10%);
+      background: transparent !important;
+    }
+
+    .switch__inner:before {
+      transform: translateX(1.25em);
+    }
+
+    .switch__inner-icons .switch__icon {
+      &:first-child {
+        opacity: 0.5;
+        transform: rotate(-360deg);
+      }
+      &:nth-child(2) {
+        opacity: 1;
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  // Light mode styles
+  &:not(.dark) {
+    .switch__inner-icons .switch__icon {
+      &:first-child {
+        opacity: 1;
+        transform: rotate(0deg);
+        color: #ffffff;
+      }
+      &:nth-child(2) {
+        opacity: 0.5;
+        transform: rotate(0deg);
+        color: #000;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    // Hover effects
+    &:hover {
+      .switch__input {
+        box-shadow: 0 0.125em 0.5em hsla(var(--hue), 10%, 10%, 0.1);
+      }
+    }
+
+    // Hover effect
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+    }
+  }
+
+  // Light mode styles
+  .light-mode & {
+    border-color: #000 !important;
+    background: rgba(255, 255, 255, 0.2) !important;
+
+    svg {
+      color: #000;
+    }
+  }
+
+  // Mobile responsiveness
+  @media (max-width: 768px) {
+    bottom: 16px !important;
+    right: 16px !important;
+    min-width: 55px !important;
+    height: 28px !important;
+    padding: 6px !important;
+
+    .switch__inner-icons {
+      top: 0.18em;
+      left: 0.34em;
+      width: 2.25em;
+      height: 1em;
+    }
+  }
+}
+
 .language-button {
   background: none !important; // Override MUI default
   border: 1px solid #fff !important;
@@ -30,7 +212,6 @@
 
     @media (max-width: 768px) {
       transform: none;
-      
     }
   }
 }
@@ -51,7 +232,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-
 }
 
 .about-section .content {
@@ -114,7 +294,7 @@
     border-radius: 20%;
     object-fit: contain;
     transition: transform 0.2s ease;
-    
+
     &:hover {
       transform: scale(1.1);
     }
@@ -183,7 +363,6 @@
   }
 
   @media (max-width: 768px) {
-
     .student-info {
       p {
         font-size: 1em;
@@ -242,13 +421,12 @@
       background-position-x: -5cm;
     }
 
-
     .about-section {
       padding-top: 150px;
       display: block;
       padding-left: 0px;
       padding-right: 0px;
-      min-height: 0;      
+      min-height: 0;
     }
 
     .about-section .content {

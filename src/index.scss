@@ -6,6 +6,46 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 1.1rem !important;
+  transition: background-color var(--trans-dur), color var(--trans-dur);
+
+}
+
+body {
+  transition: 
+    background-color var(--trans-dur) var(--trans-timing),
+    color var(--trans-dur) var(--trans-timing);
+}
+
+// Common elements transitions
+p, h1, h2, h3, h4, h5, h6, span, div {
+  transition: 
+    color var(--trans-dur) var(--trans-timing),
+    background-color var(--trans-dur) var(--trans-timing);
+}
+
+// Container elements transitions
+.navbar-fixed-top,
+.vertical-timeline-element-content,
+.expertise-container,
+.projects-container,
+.contact-container {
+  transition: 
+    background-color var(--trans-dur) var(--trans-timing),
+    border-color var(--trans-dur) var(--trans-timing),
+    box-shadow var(--trans-dur) var(--trans-timing);
+}
+
+// Interactive elements transitions
+button,
+.MuiButton-root,
+.MuiIconButton-root,
+.tech-chip {
+  transition: 
+    background-color var(--trans-dur) var(--trans-timing),
+    color var(--trans-dur) var(--trans-timing),
+    border-color var(--trans-dur) var(--trans-timing),
+    box-shadow var(--trans-dur) var(--trans-timing),
+    transform 0.2s ease !important;
 }
 
 code {
@@ -45,7 +85,10 @@ button {
 }
 
 .navigation-bar {
+  
+  display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: #0d1116;
 
   button {
