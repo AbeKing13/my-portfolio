@@ -126,6 +126,23 @@
   display: block;
 }
 
+@media (max-width: 768px) {
+  .details-box {
+
+    ul {
+      font-size: 0.9rem;
+      padding-left: 20px;
+      margin-bottom: 16px;
+      
+      li {
+        margin-bottom: 4px;
+        line-height: 1.4;
+      }
+    }
+  }
+  
+}
+
 /* Timeline element styles and hover effects */
 .vertical-timeline-element--work {
   position: relative; /* Create stacking context */
