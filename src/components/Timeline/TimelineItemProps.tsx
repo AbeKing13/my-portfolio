@@ -11,7 +11,6 @@ interface TimelineItemProps {
   city: string;
   details: React.ReactNode;
   logo?: React.ReactNode;
-  icon?: React.ReactNode;
 }
 
 export default TimelineItemProps;
