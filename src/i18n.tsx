@@ -12,6 +12,9 @@ i18n
     debug: process.env.NODE_ENV === 'development',
     interpolation: {
       escapeValue: false,
+    },
+    backend: {
+      loadPath: '/locales/{{lng}}/{{ns}}.json',
     }
   });
 

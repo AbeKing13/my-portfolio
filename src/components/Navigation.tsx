@@ -6,6 +6,7 @@ import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import Divider from "@mui/material/Divider";
+import LanguageIcon from "@mui/icons-material/Language";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
 import LightModeIcon from "@mui/icons-material/LightMode";
@@ -13,6 +14,7 @@ import List from "@mui/material/List";
 import ListIcon from "@mui/icons-material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
+import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
@@ -26,7 +28,7 @@ const navItems = [
 ];
 
 function Navigation({ parentToChild, modeChange }: any) {
-  const { i18n, t } = useTranslation();
+  const { i18n } = useTranslation();
 
   const { mode } = parentToChild;
 
@@ -61,6 +63,16 @@ function Navigation({ parentToChild, modeChange }: any) {
       console.error('Element with id "expertise" not found'); // Debugging: Log error if element is not found
     }
   };
+
+  const LanguageButton = () => (
+    <Button
+      onClick={() => i18n.changeLanguage(i18n.language === "en" ? "fr" : "en")}
+      className="language-button"
+      startIcon={<LanguageIcon />}
+    >
+      {i18n.language === "en" ? "FR" : "EN"}
+    </Button>
+  );
 
   const drawer = (
     <Box
@@ -122,6 +134,7 @@ function Navigation({ parentToChild, modeChange }: any) {
               </Button>
             ))}
           </Box>
+          <LanguageButton />
         </Toolbar>
       </AppBar>
       <nav>
@@ -147,14 +160,6 @@ function Navigation({ parentToChild, modeChange }: any) {
           {drawer}
         </Drawer>
       </nav>
-      <button
-        onClick={() =>
-          i18n.changeLanguage(i18n.language === "en" ? "fr" : "en")
-        }
-        className="language-button"
-      >
-        {i18n.language.toUpperCase()}
-      </button>
     </Box>
   );
 }
