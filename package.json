@@ -2,7 +2,7 @@
   "name": "amirh",
   "version": "1.0.0",
   "private": true,
-  "homepage": "http://amir.com.co",
+  "homepage": "https://amir.com.co",
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@emotion/react": "^11.11.4",
