@@ -53,11 +53,16 @@ function Timeline() {
                   <strong>{t("career.stingray.tasks.title")}:</strong>
                 </p>
                 <ul>
-                  {(t("career.stingray.tasks.list", { returnObjects: true }) as string[]).map(
-                    (task: string, index: number) => (
-                      <li key={index}>{task}</li>
-                    )
-                  )}
+                  {(
+                    t("career.stingray.tasks.list", {
+                      returnObjects: true,
+                    }) as string[]
+                  ).map((task: string, index: number) => (
+                    <li
+                      key={index}
+                      dangerouslySetInnerHTML={{ __html: task }}
+                    />
+                  ))}
                 </ul>
                 <p>
                   <strong>{t("career.stingray.technologies.title")}:</strong>
@@ -89,11 +94,16 @@ function Timeline() {
                   <strong>{t("career.ssc.tasks.title")}:</strong>
                 </p>
                 <ul>
-                  {(t("career.ssc.tasks.list", { returnObjects: true }) as string[]).map(
-                    (task: string, index: number) => (
-                      <li key={index}>{task}</li>
-                    )
-                  )}
+                  {(
+                    t("career.ssc.tasks.list", {
+                      returnObjects: true,
+                    }) as string[]
+                  ).map((task: string, index: number) => (
+                    <li
+                      key={index}
+                      dangerouslySetInnerHTML={{ __html: task }}
+                    />
+                  ))}
                 </ul>
                 <p>
                   <strong>{t("career.ssc.technologies.title")}:</strong>
@@ -128,11 +138,16 @@ function Timeline() {
                   <strong>{t("career.matrox.tasks.title")}:</strong>
                 </p>
                 <ul>
-                  {(t("career.matrox.tasks.list", { returnObjects: true }) as string[]).map(
-                    (task: string, index: number) => (
-                      <li key={index}>{task}</li>
-                    )
-                  )}
+                  {(
+                    t("career.matrox.tasks.list", {
+                      returnObjects: true,
+                    }) as string[]
+                  ).map((task: string, index: number) => (
+                    <li
+                      key={index}
+                      dangerouslySetInnerHTML={{ __html: task }}
+                    />
+                  ))}
                 </ul>
                 <p>
                   <strong>{t("career.matrox.technologies.title")}:</strong>
@@ -167,11 +182,16 @@ function Timeline() {
                   <strong>{t("career.addatech.tasks.title")}:</strong>
                 </p>
                 <ul>
-                  {(t("career.addatech.tasks.list", { returnObjects: true }) as string[]).map(
-                    (task: string, index: number) => (
-                      <li key={index}>{task}</li>
-                    )
-                  )}
+                  {(
+                    t("career.addatech.tasks.list", {
+                      returnObjects: true,
+                    }) as string[]
+                  ).map((task: string, index: number) => (
+                    <li
+                      key={index}
+                      dangerouslySetInnerHTML={{ __html: task }}
+                    />
+                  ))}
                 </ul>
                 <p>
                   <strong>{t("career.addatech.technologies.title")}:</strong>

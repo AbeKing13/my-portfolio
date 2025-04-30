@@ -92,22 +92,26 @@ i18n
               tasks: {
                 title: "Tasks",
                 list: [
-                  "Develop and maintain ETL pipelines",
-                  "Analyze and investigate data inconsistencies",
-                  "Build and optimize data processes"
+                  "Worked with <b>ETL</b> pipelines processing <b>100+ GB</b> of data daily",
+                  "Contributed approximately <b>3,000+ lines</b> of <b>Java</b> production code across multiple repositories",
+                  "Processed and analyzed datasets containing <b>50+ million</b> rows across <b>30+ tables</b>",
+                  "Wrote <b>500+ lines</b> of <b>Python</b> scripts for data analysis, validation, and troubleshooting",
+                  "Contributed to <b>18+ JIRA tickets</b> across multiple data engineering projects",
+                  "Created and implemented <b>40+ unit tests</b> to ensure code quality and data integrity",
+                  "Improved data quality for analytics platforms serving <b>10+ million users</b>",
+                  "Developed an automated monitoring solution for 5 different data sources that sends daily status reports via Microsoft Teams, providing real-time visibility into ETL pipeline performance"
                 ]
               },
               technologies: {
-                title: "Technologies",
+                title: "Stack",
                 stack: [
+                  "ETL",
+                  "Google BigQuery",
+                  "Google Cloud Platform",
+                  "Apache Beam",
+                  "Java",
                   "Python",
                   "SQL",
-                  "Java",
-                  "Rust",
-                  "ETL",
-                  "BigQuery",
-                  "Apache Beam",
-                  "Google Cloud Platform",
                   "GitLab"
                 ]
               }
@@ -120,18 +124,18 @@ i18n
               tasks: {
                 title: "Tasks",
                 list: [
-                  "Automate extraction, verification, and updating of email data in Excel",
-                  "Migrate Excel data to SQL Server with Azure SQL",
-                  "Automate SQL data updates using Power Automate",
-                  "Prepare data for Power BI visualizations",
-                  "Work in a Scrum Agile environment"
+                  "Built a <b>Python-based</b> solution automating the extraction, verification, and updating of <b>5,000+ rows</b> of email data across multiple Excel files, using <b>customTkinter</b> for the GUI",
+                  "Automated <b>15+ recurring</b> data update processes using <b>Power Automate</b>",
+                  "Migrated a consolidated Excel dataset covering <b>10+ services</b> to an <b>Azure SQL Server</b> using <b>SSMS</b>",
+                  "Imported, transformed, and visualized data in <b>Power BI</b>, enhancing <b>5+ existing reports</b> with <b>20+ new visuals</b>"
                 ]
               },
               technologies: {
-                title: "Technologies",
+                title: "Stack",
                 stack: [
                   "Python",
                   "SQL",
+                  "Tkinter",
                   "User Interface",
                   "Azure SQL",
                   "AI Hub",
@@ -149,20 +153,21 @@ i18n
               tasks: {
                 title: "Tasks",
                 list: [
-                  "Develop new features and enhance functionality in an existing C project",
-                  "Resolve bugs affecting new features",
-                  "Operate within an Ubuntu environment",
-                  "Perform HDMI protocol tests on devices using an oscilloscope"
+                  "Developed and enhanced <b>10+ features</b> in an existing <b>C project</b> to improve system performance and functionality.",
+                  "Resolved <b>15+ bugs</b> impacting the integration of new features, ensuring system stability.",
+                  "Configured an <b>Ubuntu virtual machine</b> from scratch to meet specific project requirements.",
+                  "Performed <b>50+ HDMI protocol tests</b> on various devices using an <b>oscilloscope</b> to verify compliance and performance."
                 ]
               },
               technologies: {
-                title: "Technologies",
+                title: "Stack",
                 stack: [
                   "C/C++",
+                  "MATLAB",
                   "Ubuntu",
                   "Oscilloscope",
                   "Electronics",
-                  "Raspberry Pico"
+                  "Raspberry Pi"
                 ]
               }
             },
@@ -174,15 +179,14 @@ i18n
               tasks: {
                 title: "Tasks",
                 list: [
-                  "Execute SQL queries",
-                  "Assist with software installation and configuration",
-                  "Provide internal hardware assistance for setting up computers",
-                  "Document solutions and troubleshooting steps",
-                  "Provide technical support via email and phone in English and French"
+                  "Responded to <b>30+ technical support requests</b> via <b>email</b> and <b>phone</b>, providing assistance in both <b>English</b> and <b>French</b>.",
+                  "Provided <b>written solutions</b> and <b>troubleshooting steps</b> to resolve <b>10+ user issues</b>, improving resolution time.",
+                  "Used <b>remote control software</b> to assist <b>5+ users</b> in troubleshooting and resolving technical issues.",
+                  "Assisted with the <b>installation</b> and <b>configuration of software</b> for <b>10+ users</b>, ensuring smooth setup."
                 ]
               },
               technologies: {
-                title: "Technologies",
+                title: "Stack",
                 stack: [
                   "SQL"
                 ]
@@ -324,22 +328,26 @@ i18n
               tasks: {
                 title: "Tâches",
                 list: [
-                  "Développer et maintenir des pipelines ETL",
-                  "Analyser et investiguer les incohérences de données",
-                  "Construire et optimiser les processus de données"
+                  "Travaillé avec des pipelines <b>ETL</b> traitant plus de <b>100 Go</b> de données quotidiennement",
+                  "Contribué à plus de <b>3 000 lignes</b> de code <b>Java</b> en production réparties sur plusieurs dépôts",
+                  "Traité et analysé des ensembles de données contenant plus de <b>50 millions</b> de lignes réparties sur plus de <b>30 tables</b>",
+                  "Écrit plus de <b>500 lignes</b> de scripts <b>Python</b> pour l'analyse, la validation et le dépannage des données",
+                  "Contribué à plus de <b>18 tickets JIRA</b> à travers plusieurs projets d'ingénierie de données",
+                  "Créé et mis en œuvre plus de <b>40 tests unitaires</b> pour assurer la qualité du code et l'intégrité des données",
+                  "Amélioré la qualité des données pour des plateformes d'analytique desservant plus de <b>10 millions d'utilisateurs</b>",
+                  "Développé une solution de surveillance automatisée pour 5 sources de données, envoyant des rapports quotidiens via Microsoft Teams pour une visibilité en temps réel sur la performance des pipelines ETL"
                 ]
               },
               technologies: {
                 title: "Technologies",
                 stack: [
+                  "ETL",
+                  "Google BigQuery",
+                  "Google Cloud Platform",
+                  "Apache Beam",
+                  "Java",
                   "Python",
                   "SQL",
-                  "Java",
-                  "Rust",
-                  "ETL",
-                  "BigQuery",
-                  "Apache Beam",
-                  "Google Cloud Platform",
                   "GitLab"
                 ]
               }
@@ -352,11 +360,10 @@ i18n
               tasks: {
                 title: "Tâches",
                 list: [
-                  "Automatiser l'extraction, la vérification et la mise à jour des données d'emails dans Excel",
-                  "Migrer les données Excel vers SQL Server avec Azure SQL",
-                  "Automatiser les mises à jour SQL avec Power Automate",
-                  "Préparer les données pour les visualisations Power BI",
-                  "Travailler dans un environnement Scrum Agile"
+                  "Développé une solution basée sur <b>Python</b> automatisant l'extraction, la vérification et la mise à jour de plus de <b>5 000 lignes</b> de données d'emails à travers plusieurs fichiers Excel, en utilisant <b>customTkinter</b> pour l'interface graphique",
+                  "Automatisé plus de <b>15 processus</b> de mise à jour de données récurrents avec <b>Power Automate</b>",
+                  "Migré un jeu de données consolidé provenant de Excel couvrant plus de <b>10 services</b> vers un <b>serveur SQL Azure</b> en utilisant <b>SSMS</b>",
+                  "Importé, transformé et visualisé des données dans <b>Power BI</b>, en améliorant plus de <b>5 rapports</b> existants avec <b>20+ nouvelles visualisations</b>"
                 ]
               },
               technologies: {
@@ -364,6 +371,7 @@ i18n
                 stack: [
                   "Python",
                   "SQL",
+                  "Tkinter",
                   "Interface Utilisateur",
                   "Azure SQL",
                   "AI Hub",
@@ -381,20 +389,21 @@ i18n
               tasks: {
                 title: "Tâches",
                 list: [
-                  "Développer de nouvelles fonctionnalités et améliorer un projet C existant",
-                  "Résoudre les bugs affectant les nouvelles fonctionnalités",
-                  "Opérer dans un environnement Ubuntu",
-                  "Effectuer des tests de protocole HDMI sur des appareils avec un oscilloscope"
+                  "Développé et amélioré plus de <b>10 fonctionnalités</b> dans un projet <b>C</b> existant pour améliorer la performance et la fonctionnalité du système.",
+                  "Résolu plus de <b>15 bogues</b> affectant l'intégration des nouvelles fonctionnalités, assurant la stabilité du système.",
+                  "Configuré une <b>machine virtuelle Ubuntu</b> depuis zéro pour répondre aux besoins spécifiques du projet.",
+                  "Effectué plus de <b>50 tests</b> du <b>protocole HDMI</b> sur divers appareils à l'aide d'un <b>oscilloscope</b> pour vérifier la conformité et la performance."
                 ]
               },
               technologies: {
                 title: "Technologies",
                 stack: [
                   "C/C++",
+                  "MATLAB",
                   "Ubuntu",
                   "Oscilloscope",
-                  "Électronique",
-                  "Raspberry Pico"
+                  "Electronics",
+                  "Raspberry Pi"
                 ]
               }
             },
@@ -406,11 +415,10 @@ i18n
               tasks: {
                 title: "Tâches",
                 list: [
-                  "Exécuter des requêtes SQL",
-                  "Assister à l'installation et la configuration de logiciels",
-                  "Fournir une assistance matérielle interne pour la configuration des ordinateurs",
-                  "Documenter les solutions et les étapes de dépannage",
-                  "Fournir un support technique par email et téléphone en anglais et en français"
+                  "Répondu à plus de <b>30 demandes</b> de support technique par <b>email</b> et <b>téléphone</b>, en fournissant de l'assistance en <b>anglais</b> et en <b>français</b>.",
+                  "Fournit des <b>solutions écrites</b> et des <b>étapes de dépannage</b> pour résoudre plus de <b>10 problèmes</b> utilisateurs, améliorant ainsi le temps de résolution.",
+                  "Utilisé des <b>logiciels de prise en main à distance</b> pour aider plus de <b>5 utilisateurs</b> dans le dépannage et la résolution de problèmes techniques.",
+                  "Assisté dans l'<b>installation</b> et la <b>configuration de logiciels</b> pour plus de <b>10 utilisateurs</b>, assurant une mise en place fluide."
                 ]
               },
               technologies: {
