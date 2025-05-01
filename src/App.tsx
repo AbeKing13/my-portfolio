@@ -54,9 +54,6 @@ function App() {
             <Contact />
           </FadeIn>
           <Footer />
-          <Routes>
-            <Route path="/" element={<Timeline />} />
-          </Routes>
         </div>
       </Router>
   );
