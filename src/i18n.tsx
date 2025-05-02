@@ -322,7 +322,7 @@ i18n
             title: "Parcours Professionnel",
             stingray: {
               date: "Jan 2025 - Présent",
-              title: "Développement Logiciel",
+              title: "Développeur Logiciel",
               company: "Stingray",
               city: "Montréal, QC, CA",
               tasks: {
