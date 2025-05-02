@@ -234,7 +234,7 @@ i18n
             portfolio: {
               title: "Portfolio Website",
               description:
-                "Developed a personal website to showcase projects, skills, and experiences using <b>React</b> and <b>Node.js</b>. Built with <b>TypeScript</b> on <b>HTML5</b> and styled with <b>SASS</b> to ensure a robust, responsive, and interactive design.",
+                "Developed a personal website to showcase projects, skills, and experiences using <b>React</b>. Built with <b>TypeScript</b> on <b>HTML5</b> and styled with <b>SASS</b> to ensure a robust, responsive, and interactive design.",
             },
           },
 
@@ -470,7 +470,7 @@ i18n
             portfolio: {
               title: "Site Web Portfolio",
               description:
-                "Développement d'un site web personnel pour présenter mes projets, compétences et expériences en utilisant <b>React</b> et <b>Node.js</b>. Construit avec <b>TypeScript</b> sur <b>HTML5</b> et stylisé avec <b>SASS</b> pour assurer une conception robuste, responsive et interactive.",
+                "Développement d'un site web personnel pour présenter mes projets, compétences et expériences en utilisant <b>React</b>. Construit avec <b>TypeScript</b> sur <b>HTML5</b> et stylisé avec <b>SASS</b> pour assurer une conception robuste, responsive et interactive.",
             },
           },
 
