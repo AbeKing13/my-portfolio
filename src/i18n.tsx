@@ -86,13 +86,13 @@ i18n
             title: "Career History",
             stingray: {
               date: "Jan 2025 - Present",
-              title: "Software Developer Intern",
+              title: "Software Developer",
               company: "Stingray",
               city: "Montreal, QC, CA",
               tasks: {
                 title: "Tasks",
                 list: [
-                  "Worked with <b>ETL</b> pipelines processing <b>100+ GB</b> of data daily",
+                  "Worked with <b>ETL</b> pipelines processing <b>20+ GB</b> of data daily",
                   "Contributed approximately <b>3,000+ lines</b> of <b>Java</b> production code across multiple repositories",
                   "Processed and analyzed datasets containing <b>50+ million</b> rows across <b>30+ tables</b>",
                   "Wrote <b>500+ lines</b> of <b>Python</b> scripts for data analysis, validation, and troubleshooting",
@@ -153,10 +153,10 @@ i18n
               tasks: {
                 title: "Tasks",
                 list: [
-                  "Developed and enhanced <b>10+ features</b> in an existing <b>C project</b> to improve system performance and functionality.",
-                  "Resolved <b>15+ bugs</b> impacting the integration of new features, ensuring system stability.",
-                  "Configured an <b>Ubuntu virtual machine</b> from scratch to meet specific project requirements.",
-                  "Performed <b>50+ HDMI protocol tests</b> on various devices using an <b>oscilloscope</b> to verify compliance and performance."
+                  "Developed and enhanced <b>10+ features</b> in an existing <b>C project</b>",
+                  "Resolved <b>15+ bugs</b> impacting the integration of new features",
+                  "Configured an <b>Ubuntu virtual machine</b> from scratch to meet specific project requirements",
+                  "Performed 50+ HDMI protocol tests on various devices using an oscilloscope to verify compliance and performance"
                 ]
               },
               technologies: {
@@ -179,10 +179,10 @@ i18n
               tasks: {
                 title: "Tasks",
                 list: [
-                  "Responded to <b>30+ technical support requests</b> via <b>email</b> and <b>phone</b>, providing assistance in both <b>English</b> and <b>French</b>.",
-                  "Provided <b>written solutions</b> and <b>troubleshooting steps</b> to resolve <b>10+ user issues</b>, improving resolution time.",
-                  "Used <b>remote control software</b> to assist <b>5+ users</b> in troubleshooting and resolving technical issues.",
-                  "Assisted with the <b>installation</b> and <b>configuration of software</b> for <b>10+ users</b>, ensuring smooth setup."
+                  "Responded to <b>30+ technical support requests</b> via email and phone",
+                  "Provided written solutions and troubleshooting steps to resolve <b>10+</b> user issues, improving resolution time",
+                  "Used remote control software to assist <b>5+</b> users in troubleshooting and resolving technical issues",
+                  "Assisted with the installation and configuration of software for <b>10+</b> users"
                 ]
               },
               technologies: {
@@ -322,13 +322,13 @@ i18n
             title: "Parcours Professionnel",
             stingray: {
               date: "Jan 2025 - Présent",
-              title: "Stagiaire en Développement Logiciel",
+              title: "Développement Logiciel",
               company: "Stingray",
               city: "Montréal, QC, CA",
               tasks: {
                 title: "Tâches",
                 list: [
-                  "Travaillé avec des pipelines <b>ETL</b> traitant plus de <b>100 Go</b> de données quotidiennement",
+                  "Travaillé avec des pipelines <b>ETL</b> traitant plus de <b>20 Go</b> de données quotidiennement",
                   "Contribué à plus de <b>3 000 lignes</b> de code <b>Java</b> en production réparties sur plusieurs dépôts",
                   "Traité et analysé des ensembles de données contenant plus de <b>50 millions</b> de lignes réparties sur plus de <b>30 tables</b>",
                   "Écrit plus de <b>500 lignes</b> de scripts <b>Python</b> pour l'analyse, la validation et le dépannage des données",
@@ -389,10 +389,10 @@ i18n
               tasks: {
                 title: "Tâches",
                 list: [
-                  "Développé et amélioré plus de <b>10 fonctionnalités</b> dans un projet <b>C</b> existant pour améliorer la performance et la fonctionnalité du système.",
-                  "Résolu plus de <b>15 bogues</b> affectant l'intégration des nouvelles fonctionnalités, assurant la stabilité du système.",
-                  "Configuré une <b>machine virtuelle Ubuntu</b> depuis zéro pour répondre aux besoins spécifiques du projet.",
-                  "Effectué plus de <b>50 tests</b> du <b>protocole HDMI</b> sur divers appareils à l'aide d'un <b>oscilloscope</b> pour vérifier la conformité et la performance."
+                  "Développé et amélioré plus de <b>10 fonctionnalités</b> dans un <b>projet C</b> existant",
+                  "Résolu plus de <b>15 bogues</b> affectant l'intégration des nouvelles fonctionnalités",
+                  "Configuré une <b>machine virtuelle Ubuntu</b> depuis zéro pour répondre aux besoins spécifiques du projet",
+                  "Effectué plus de <b>50 tests</b> du protocole HDMI sur divers appareils à l'aide d'un oscilloscope pour vérifier la conformité et la performance"
                 ]
               },
               technologies: {
@@ -415,10 +415,10 @@ i18n
               tasks: {
                 title: "Tâches",
                 list: [
-                  "Répondu à plus de <b>30 demandes</b> de support technique par <b>email</b> et <b>téléphone</b>, en fournissant de l'assistance en <b>anglais</b> et en <b>français</b>.",
-                  "Fournit des <b>solutions écrites</b> et des <b>étapes de dépannage</b> pour résoudre plus de <b>10 problèmes</b> utilisateurs, améliorant ainsi le temps de résolution.",
-                  "Utilisé des <b>logiciels de prise en main à distance</b> pour aider plus de <b>5 utilisateurs</b> dans le dépannage et la résolution de problèmes techniques.",
-                  "Assisté dans l'<b>installation</b> et la <b>configuration de logiciels</b> pour plus de <b>10 utilisateurs</b>, assurant une mise en place fluide."
+                  "Répondu à plus de <b>30</b> demandes de support technique par email et téléphone",
+                  "Fournit des solutions écrites et des étapes de dépannage pour résoudre plus de <b>10 problèmes</b> utilisateurs, améliorant ainsi le temps de résolution",
+                  "Utilisé des logiciels de prise en main à distance pour aider plus de <b>5 utilisateurs</b> dans le dépannage et la résolution de problèmes techniques",
+                  "Assisté dans l'installation et la configuration de logiciels pour plus de <b>10 utilisateurs</b>"
                 ]
               },
               technologies: {
