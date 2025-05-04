@@ -92,9 +92,9 @@ i18n
               tasks: {
                 title: "Tasks",
                 list: [
-                  "Worked with <b>ETL</b> pipelines processing <b>20+ GB</b> of data daily",
+                  "Worked with <b>ETL</b> pipelines on <b>Google Cloud Platform (GCP)</b>, processing <b>20+ GB</b> of data daily using <b>Apache Beam</b>",
                   "Contributed approximately <b>3,000+ lines</b> of <b>Java</b> production code across multiple repositories",
-                  "Processed and analyzed datasets containing <b>50+ million</b> rows across <b>30+ tables</b>",
+                  "Processed and analyzed datasets containing <b>50+ million</b> rows across <b>30+ BigQuery tables</b>",
                   "Wrote <b>500+ lines</b> of <b>Python</b> scripts for data analysis, validation, and troubleshooting",
                   "Contributed to <b>18+ JIRA tickets</b> across multiple data engineering projects",
                   "Created and implemented <b>40+ unit tests</b> to ensure code quality and data integrity",
@@ -328,9 +328,9 @@ i18n
               tasks: {
                 title: "Tâches",
                 list: [
-                  "Travaillé avec des pipelines <b>ETL</b> traitant plus de <b>20 Go</b> de données quotidiennement",
+                  "Travaillé sur des pipelines <b>ETL</b> sur <b>Google Cloud Platform (GCP)</b>, traitant <b>plus de 20 Go</b> de données par jour avec <b>Apache Beam</b>",
                   "Contribué à plus de <b>3 000 lignes</b> de code <b>Java</b> en production réparties sur plusieurs dépôts",
-                  "Traité et analysé des ensembles de données contenant plus de <b>50 millions</b> de lignes réparties sur plus de <b>30 tables</b>",
+                  "Traité et analysé des ensembles de données contenant plus de <b>50 millions</b> de lignes réparties sur plus de <b>30 tables BigQuery</b>",
                   "Écrit plus de <b>500 lignes</b> de scripts <b>Python</b> pour l'analyse, la validation et le dépannage des données",
                   "Contribué à plus de <b>18 tickets JIRA</b> à travers plusieurs projets d'ingénierie de données",
                   "Créé et mis en œuvre plus de <b>40 tests unitaires</b> pour assurer la qualité du code et l'intégrité des données",
