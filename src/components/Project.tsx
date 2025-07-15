@@ -126,7 +126,7 @@ function Project() {
               alt="Welded Frame Structure 3D"
               width="50%"
             />
-            <video
+            {/* <video
               ref={videoRef}
               src={require("../assets/images/projects/cnc.mp4")}
               className="zoom"
@@ -134,14 +134,14 @@ function Project() {
               loop
               muted
               playsInline
-            />
+            /> */}
           </div>
           <div className="project-title">
             <h2>{t("projects.cnc.title")}</h2>
           </div>
           <p dangerouslySetInnerHTML={{ __html: t("projects.cnc.description") }}/>
         </div>
-        
+
       </div>
     </div>
   );
