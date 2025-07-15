@@ -1,58 +1,41 @@
 import { useTranslation } from "react-i18next";
 import "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faReact } from "@fortawesome/free-brands-svg-icons";
-import { faCode, faDatabase, faTools } from "@fortawesome/free-solid-svg-icons";
+import { faGear, faToolbox, faChartArea, faCompassDrafting } from "@fortawesome/free-solid-svg-icons";
 import Chip from "@mui/material/Chip";
 import "../assets/styles/Expertise.scss";
 
 function Expertise() {
   const { t } = useTranslation();
 
-  const programmingSkills = [
-    { name: t("expertise.programming.skills.python") },
-    { name: t("expertise.programming.skills.java") },
-    { name: t("expertise.programming.skills.c") },
-    { name: t("expertise.programming.skills.cpp") },
-    { name: t("expertise.programming.skills.javascript") },
-    { name: t("expertise.programming.skills.typescript") },
-    { name: t("expertise.programming.skills.apiIntegration") },
-    { name: t("expertise.programming.skills.objectOrientedProgramming") },
+  const mechanicalDesignSkills = [
+    { name: t("expertise.mechanicalDesign.skills.solidworks") },
+    { name: t("expertise.mechanicalDesign.skills.autocad") },
+    { name: t("expertise.mechanicalDesign.skills.inventor") }
   ];
 
-  const webDevelopmentSkills = [
-    { name: t("expertise.webDevelopment.skills.reactjs") },
-    { name: t("expertise.webDevelopment.skills.nodejs") },
-    { name: t("expertise.webDevelopment.skills.html") },
-    { name: t("expertise.webDevelopment.skills.css") },
-    { name: t("expertise.webDevelopment.skills.jquery") },
-    { name: t("expertise.webDevelopment.skills.maven") },
+  const manufacturingSkills = [
+    { name: t("expertise.manufacturing.skills.cnc") },
+    { name: t("expertise.manufacturing.skills.lathe") },
+    { name: t("expertise.manufacturing.skills.milling") },
+    { name: t("expertise.manufacturing.skills.welding") },
+    { name: t("expertise.manufacturing.skills.threeDPrinting") },
+    { name: t("expertise.manufacturing.skills.cadCam") }
   ];
 
-  const dataSkills = [
-    { name: t("expertise.data.skills.etl") },
-    { name: t("expertise.data.skills.json") },
-    { name: t("expertise.data.skills.bigquery") },
-    { name: t("expertise.data.skills.sqlQuery") },
-    { name: t("expertise.data.skills.mysql") },
-    { name: t("expertise.data.skills.postgresql") },
-    { name: t("expertise.data.skills.mariadb") },
-    { name: t("expertise.data.skills.pandas") },
-    { name: t("expertise.data.skills.numpy") },
-    { name: t("expertise.data.skills.statisticalAnalysis") },
+  const analysisSkills = [
+    { name: t("expertise.analysis.skills.fea") },
+    { name: t("expertise.analysis.skills.thermodynamics") },
+    { name: t("expertise.analysis.skills.statics") },
+    { name: t("expertise.analysis.skills.strengthOfMaterials") }
   ];
 
-  const toolsAndPlatforms = [
-    { name: t("expertise.tools.skills.github") },
-    { name: t("expertise.tools.skills.docker") },
-    { name: t("expertise.tools.skills.azure") },
-    { name: t("expertise.tools.skills.visualStudioCode") },
-    { name: t("expertise.tools.skills.pycharm") },
-    { name: t("expertise.tools.skills.intellijIdea") },
-    { name: t("expertise.tools.skills.ubuntu") },
-    { name: t("expertise.tools.skills.windowsServer") },
-    { name: t("expertise.tools.skills.bash") },
-    { name: t("expertise.tools.skills.matlab") },
+  const technicalTools = [
+    { name: t("expertise.technicalTools.skills.msOffice") },
+    { name: t("expertise.technicalTools.skills.mathcad") },
+    { name: t("expertise.technicalTools.skills.isoStandards") },
+    { name: t("expertise.technicalTools.skills.asmeStandards") },
+    { name: t("expertise.technicalTools.skills.safety") }
   ];
 
   return (
@@ -61,40 +44,40 @@ function Expertise() {
         <h1>{t("expertise.title")}</h1>
         <div className="skills-grid">
           <div className="skill">
-            <FontAwesomeIcon icon={faCode} size="3x" />
-            <h3>{t("expertise.programming.title")}</h3>
+            <FontAwesomeIcon icon={faCompassDrafting} size="3x" />
+            <h3>{t("expertise.mechanicalDesign.title")}</h3>
             <div className="flex-chips">
-              {programmingSkills.map((skill, index) => (
+              {mechanicalDesignSkills.map((skill, index) => (
                 <Chip key={index} className="chip" label={skill.name} />
               ))}
             </div>
           </div>
 
           <div className="skill">
-            <FontAwesomeIcon icon={faDatabase} size="3x" />
-            <h3>{t("expertise.data.title")}</h3>
+            <FontAwesomeIcon icon={faGear} size="3x" />
+            <h3>{t("expertise.manufacturing.title")}</h3>
             <div className="flex-chips">
-              {dataSkills.map((skill, index) => (
-                <Chip key={index} className="chip" label={skill.name} />
-              ))}
-            </div>
-          </div>
-
-          <div className="skill">
-            <FontAwesomeIcon icon={faReact} size="3x" />
-            <h3>{t("expertise.webDevelopment.title")}</h3>
-            <div className="flex-chips">
-              {webDevelopmentSkills.map((service, index) => (
+              {manufacturingSkills.map((service, index) => (
                 <Chip key={index} className="chip" label={service.name} />
               ))}
             </div>
           </div>
 
           <div className="skill">
-            <FontAwesomeIcon icon={faTools} size="3x" />
-            <h3>{t("expertise.tools.title")}</h3>
+            <FontAwesomeIcon icon={faChartArea} size="3x" />
+            <h3>{t("expertise.analysis.title")}</h3>
             <div className="flex-chips">
-              {toolsAndPlatforms.map((service, index) => (
+              {analysisSkills.map((skill, index) => (
+                <Chip key={index} className="chip" label={skill.name} />
+              ))}
+            </div>
+          </div>
+
+          <div className="skill">
+            <FontAwesomeIcon icon={faToolbox} size="3x" />
+            <h3>{t("expertise.technicalTools.title")}</h3>
+            <div className="flex-chips">
+              {technicalTools.map((service, index) => (
                 <Chip key={index} className="chip" label={service.name} />
               ))}
             </div>

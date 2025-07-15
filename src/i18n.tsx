@@ -25,60 +25,44 @@ i18n
 
           expertise: {
             title: "Expertise",
-            programming: {
-              title: "Programming",
+            mechanicalDesign: {
+              title: "Mechanical Design",
               skills: {
-                python: "Python",
-                java: "Java",
-                c: "C",
-                cpp: "C++",
-                javascript: "JavaScript",
-                typescript: "TypeScript",
-                apiIntegration: "API Integration",
-                objectOrientedProgramming: "Object-Oriented Programming",
-              },
+                solidworks: "SolidWorks",
+                autocad: "AutoCAD",
+                inventor: "Autodesk Inventor"
+              }
             },
-            webDevelopment: {
-              title: "Web Development",
+            manufacturing: {
+              title: "Manufacturing Processes",
               skills: {
-                reactjs: "React.js",
-                nodejs: "Node.js",
-                html: "HTML",
-                css: "CSS",
-                jquery: "JQuery",
-                maven: "Maven",
-              },
+                cnc: "CNC Machining",
+                lathe: "Lathe Operation",
+                milling: "Milling",
+                welding: "Welding",
+                threeDPrinting: "3D Printing",
+                cadCam: "CAD/CAM"
+              }
             },
-            data: {
-              title: "Data",
+            analysis: {
+              title: "Mechanical Analysis",
               skills: {
-                etl: "ETL",
-                json: "JSON",
-                bigquery: "BigQuery",
-                sqlQuery: "SQL Query",
-                mysql: "MySQL",
-                postgresql: "PostgreSQL",
-                mariadb: "MariaDB",
-                pandas: "Pandas",
-                numpy: "NumPy",
-                statisticalAnalysis: "Statistical Analysis",
-              },
+                fea: "Finite Element Analysis (FEA)",
+                thermodynamics: "Thermodynamics",
+                statics: "Statics",
+                strengthOfMaterials: "Strength of Materials",
+              }
             },
-            tools: {
-              title: "Development Tools & Environments",
+            technicalTools: {
+              title: "Technical Tools & Environment",
               skills: {
-                github: "GitHub",
-                docker: "Docker",
-                azure: "Azure",
-                visualStudioCode: "Visual Studio Code",
-                pycharm: "PyCharm",
-                intellijIdea: "IntelliJ IDEA",
-                ubuntu: "Ubuntu",
-                windowsServer: "Windows Server",
-                bash: "Bash",
-                matlab: "Matlab",
-              },
-            },
+                msOffice: "Microsoft Office (Excel, Word)",
+                mathcad: "Mathcad",
+                isoStandards: "ISO Standards",
+                asmeStandards: "ASME Standards",
+                safety: "Health & Safety Standards"
+              }
+            }
           },
 
           career: {
@@ -260,60 +244,44 @@ i18n
 
           expertise: {
             title: "Expertise",
-            programming: {
-              title: "Programmation",
+            mechanicalDesign: {
+              title: "Conception Mécanique",
               skills: {
-                python: "Python",
-                java: "Java",
-                c: "C",
-                cpp: "C++",
-                javascript: "JavaScript",
-                typescript: "TypeScript",
-                apiIntegration: "Intégration d'API",
-                objectOrientedProgramming: "Programmation Orientée Objet",
-              },
+                solidworks: "SolidWorks",
+                autocad: "AutoCAD",
+                inventor: "Autodesk Inventor"
+              }
             },
-            webDevelopment: {
-              title: "Développement Web",
+            manufacturing: {
+              title: "Procédés de Fabrication",
               skills: {
-                reactjs: "React.js",
-                nodejs: "Node.js",
-                html: "HTML",
-                css: "CSS",
-                jquery: "JQuery",
-                maven: "Maven",
-              },
+                cnc: "Usinage CNC",
+                lathe: "Opération de Tour",
+                milling: "Fraisage",
+                welding: "Soudure",
+                threeDPrinting: "Impression 3D",
+                cadCam: "Conception/Fabrication Assistée par Ordinateur (CAD/CAM)",
+              }
             },
-            data: {
-              title: "Données",
+            analysis: {
+              title: "Analyse Mécanique",
               skills: {
-                etl: "ETL",
-                json: "JSON",
-                bigquery: "BigQuery",
-                sqlQuery: "Requêtes SQL",
-                mysql: "MySQL",
-                postgresql: "PostgreSQL",
-                mariadb: "MariaDB",
-                pandas: "Pandas",
-                numpy: "NumPy",
-                statisticalAnalysis: "Analyse Statistique",
-              },
+                fea: "Analyse par Éléments Finis (FEA)",
+                thermodynamics: "Thermodynamique",
+                statics: "Statique",
+                strengthOfMaterials: "Résistance des Matériaux"
+              }
             },
-            tools: {
-              title: "Outils et Environnements de Développement",
+            technicalTools: {
+              title: "Outils Techniques et Environnement",
               skills: {
-                github: "GitHub",
-                docker: "Docker",
-                azure: "Azure",
-                visualStudioCode: "Visual Studio Code",
-                pycharm: "PyCharm",
-                intellijIdea: "IntelliJ IDEA",
-                ubuntu: "Ubuntu",
-                windowsServer: "Windows Server",
-                bash: "Bash",
-                matlab: "Matlab",
-              },
-            },
+                msOffice: "Microsoft Office (Excel, Word)",
+                mathcad: "Mathcad",
+                isoStandards: "Normes ISO",
+                asmeStandards: "Normes ASME",
+                safety: "Normes de Santé et Sécurité"
+              }
+            }
           },
 
           career: {

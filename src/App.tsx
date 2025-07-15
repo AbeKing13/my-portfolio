@@ -7,7 +7,6 @@ import {
   Navigation,
   Footer,
 } from "./components";
-import Timeline from "./components/Timeline/Timeline";
 import FadeIn from "./components/FadeIn";
 import "./index.scss";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
@@ -49,7 +48,6 @@ function App() {
           <FadeIn transitionDuration={700}>
             <Main />
             <Expertise />
-            <Timeline />
             <Project />
             <Contact />
           </FadeIn>
