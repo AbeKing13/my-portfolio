@@ -18,7 +18,6 @@ i18n
 
           navigation: {
             expertise: "Expertise",
-            career: "Career",
             projects: "Projects",
             contact: "Contact",
           },
@@ -65,139 +64,27 @@ i18n
             }
           },
 
-          career: {
-            title: "Career History",
-            stingray: {
-              date: "Jan 2025 - Present",
-              title: "Software Developer",
-              company: "Stingray",
-              city: "Montreal, QC, CA",
-              tasks: {
-                title: "Tasks",
-                list: [
-                  "Worked with <b>ETL</b> pipelines on <b>Google Cloud Platform (GCP)</b>, processing <b>20+ GB</b> of data daily using <b>Apache Beam</b>",
-                  "Contributed approximately <b>3,000+ lines</b> of <b>Java</b> production code across multiple repositories",
-                  "Processed and analyzed datasets containing <b>50+ million</b> rows across <b>30+ BigQuery tables</b>",
-                  "Wrote <b>500+ lines</b> of <b>Python</b> scripts for data analysis, validation, and troubleshooting",
-                  "Contributed to <b>18+ JIRA tickets</b> across multiple data engineering projects",
-                  "Created and implemented <b>40+ unit tests</b> to ensure code quality and data integrity",
-                  "Improved data quality for analytics platforms serving <b>10+ million users</b>",
-                  "Developed an automated monitoring solution for 5 different data sources that sends daily status reports via Microsoft Teams, providing real-time visibility into ETL pipeline performance"
-                ]
-              },
-              technologies: {
-                title: "Stack",
-                stack: [
-                  "ETL",
-                  "Google BigQuery",
-                  "Google Cloud Platform",
-                  "Apache Beam",
-                  "Java",
-                  "Python",
-                  "SQL",
-                  "GitLab"
-                ]
-              }
-            },
-            ssc: {
-              date: "May 2024 - Dec 2024",
-              title: "Data Analyst",
-              company: "Shared Services Canada",
-              city: "Montreal, QC, CA",
-              tasks: {
-                title: "Tasks",
-                list: [
-                  "Built a <b>Python-based</b> solution automating the extraction, verification, and updating of <b>5,000+ rows</b> of email data across multiple Excel files, using <b>customTkinter</b> for the GUI",
-                  "Automated <b>15+ recurring</b> data update processes using <b>Power Automate</b>",
-                  "Migrated a consolidated Excel dataset covering <b>10+ services</b> to an <b>Azure SQL Server</b> using <b>SSMS</b>",
-                  "Imported, transformed, and visualized data in <b>Power BI</b>, enhancing <b>5+ existing reports</b> with <b>20+ new visuals</b>"
-                ]
-              },
-              technologies: {
-                title: "Stack",
-                stack: [
-                  "Python",
-                  "SQL",
-                  "Tkinter",
-                  "User Interface",
-                  "Azure SQL",
-                  "AI Hub",
-                  "Power Automate",
-                  "Power BI",
-                  "Power Query"
-                ]
-              }
-            },
-            matrox: {
-              date: "Jan 2023 - Aug 2023",
-              title: "R&D Technician",
-              company: "Matrox",
-              city: "Montreal, QC, CA",
-              tasks: {
-                title: "Tasks",
-                list: [
-                  "Developed and enhanced <b>10+ features</b> in an existing <b>C project</b>",
-                  "Resolved <b>15+ bugs</b> impacting the integration of new features",
-                  "Configured an <b>Ubuntu virtual machine</b> from scratch to meet specific project requirements",
-                  "Performed 50+ HDMI protocol tests on various devices using an oscilloscope to verify compliance and performance"
-                ]
-              },
-              technologies: {
-                title: "Stack",
-                stack: [
-                  "C/C++",
-                  "MATLAB",
-                  "Ubuntu",
-                  "Oscilloscope",
-                  "Electronics",
-                  "Raspberry Pi"
-                ]
-              }
-            },
-            addatech: {
-              date: "June 2022 - Aug 2022",
-              title: "Technical Support Technician",
-              company: "Addatech",
-              city: "Laval, QC, CA",
-              tasks: {
-                title: "Tasks",
-                list: [
-                  "Responded to <b>30+ technical support requests</b> via email and phone",
-                  "Provided written solutions and troubleshooting steps to resolve <b>10+</b> user issues, improving resolution time",
-                  "Used remote control software to assist <b>5+</b> users in troubleshooting and resolving technical issues",
-                  "Assisted with the installation and configuration of software for <b>10+</b> users"
-                ]
-              },
-              technologies: {
-                title: "Stack",
-                stack: [
-                  "SQL"
-                ]
-              }
-            }
-          },
-
           projects: {
             title: "Projects",
-            digiclipse: {
-              title: "DigiClipse",
+            bati: {
+              title: "Industrial welded frame structure",
               description:
-                "Ensure the availability of parts by automating the extraction and verification of part numbers through Excel files and the Digikey API, while managing human errors using <b>Pandas</b>, <b>Python</b>, <b>Docker</b> and <b>APIs</b>.",
+                "Designed an <b>industrial welded frame structure</b> based on a <b>specification sheet</b>. Developed the <b>complete system</b>, selected appropriate <b>materials</b>, <b>profiles</b>, and <b>mechanical joints</b> (welding, bolts, mortise-and-tenon). Created a <b>3D model</b> using <b>SolidWorks</b>, performed <b>strength calculations</b>, and validated the design through <b>finite element analysis (FEA)</b>. Produced <b>technical drawings</b> and a <b>design report</b> in accordance with <b>industrial standards</b>. Applied skills in <b>statics</b>, <b>dynamics</b>, <b>strength of materials</b>, <b>technical drawing</b>, <b>project management</b>, and <b>technical presentation</b>."
             },
-            arcade: {
-              title: "Arcade",
+            convoyeur: {
+              title: "Pallet Conveyor",
               description:
-                "Built an <b>arcade game</b> from scratch, designing both the <b>hardware</b> and <b>software</b>. Programmed <b>gameplay</b>, <b>UI</b>, <b>menus</b>, and <b>settings</b> while optimizing performance for a smooth experience. Applied skills in <b>game programming</b>, <b>Arduino</b>, <b>UI design</b>, <b>controller integration</b>, and <b>electronics</b>.",
+                "Complete design of an <b>industrial pallet conveyor</b> based on a defined load profile. Selection of the <b>chain type (RS Tsubaki)</b>, <b>sprockets</b>, <b>SEW gearmotor</b>, and <b>bearings</b>. Performed <b>power calculations</b>, <b>chain tension analysis</b>, <b>reduction ratio calculations</b>, and <b>sizing of the main shaft</b>. Created a <b>3D model</b> in <b>SolidWorks</b> and produced <b>technical drawings</b> (assembly, shaft, gearmotor), along with a complete engineering package including the <b>Excel calculation sheet</b> and the <b>Pack&Go</b>. Applied skills in <b>industrial component selection</b>, <b>mechanical joints</b>, <b>CAD modeling</b>, and <b>technical drawing standards</b>."
             },
-            aspire: {
-              title: "Aspire",
+            escabot: {
+              title: "Ladder",
               description:
-                "Develop a <b>voice assistant</b> named <b>Aspire</b> (still under development) for <b>computer control</b>. It enables users to <b>open applications</b>, <b>navigate the web</b>, and ask questions to <b>ChatGPT</b>. The project leverages <b>OpenAI GPT-3</b> and <b>Python</b>, utilizes <b>APIs</b> for integration, and incorporates <b>audio file management</b>.",
+                "Complete design of a custom <b>mechanical assembly</b> using advanced <b>SolidWorks</b> tools. Modeled parts using <b>sheet metal</b> and <b>weldment</b> features, and integrated a <b>fully assembled system with hardware</b> that complies with industry standards. Created over <b>10 detailed technical drawings</b>, including an <b>annotated exploded view</b> following manufacturing conventions. Produced a <b>'Motion Study' presentation video</b> to clearly and professionally illustrate the assembly’s operation for <b>client presentations or technical demonstrations</b>. Highlighted skills in <b>3D modeling</b>, <b>industrial assembly design</b>, <b>drafting standards</b>, and <b>visual communication</b>.",
             },
-            database: {
-              title: "Web Database Interface",
+            cnc: {
+              title: "Projet CNC",
               description:
-                "Set up a <b>web database interface</b> on a <b>Raspberry Pi</b> server with a <b>web interface</b> that simplifies <b>displaying</b>, <b>entering</b>, and <b>manipulating data</b>. Leveraging <b>web development</b> best practices, the project integrates <b>SQL</b> capabilities with a user-friendly <b>user interface</b> and utilizes <b>MariaDB</b> for robust database management.",
+                "Completed a <b>full machining project</b> on a CNC machining center. Designed a <b>custom mechanical part</b> in <b>3D with Autodesk Inventor</b>, wrote the <b>G‑code program</b> both manually and with <b>Mastercam</b> (G00, G01, G02, G03, fixed cycles), then validated it through simulation in <b>Vericut</b>. Prepared the <b>machining setup</b>, adjusted <b>work offsets</b>, and ran the machine. Produced the part on the CNC while optimizing <b>feed rates</b>, <b>tool selection</b>, and <b>cutting parameters</b>. Performed dimensional and visual inspection of the final piece to ensure <b>machining quality</b>."
             },
             voiceTranslator: {
               title: "Voice Translator",
@@ -237,7 +124,6 @@ i18n
 
           navigation: {
             expertise: "Expertise",
-            career: "Carrière",
             projects: "Projets",
             contact: "Contact",
           },
@@ -284,139 +170,27 @@ i18n
             }
           },
 
-          career: {
-            title: "Parcours Professionnel",
-            stingray: {
-              date: "Jan 2025 - Présent",
-              title: "Développeur Logiciel",
-              company: "Stingray",
-              city: "Montréal, QC, CA",
-              tasks: {
-                title: "Tâches",
-                list: [
-                  "Travaillé sur des pipelines <b>ETL</b> sur <b>Google Cloud Platform (GCP)</b>, traitant <b>plus de 20 Go</b> de données par jour avec <b>Apache Beam</b>",
-                  "Contribué à plus de <b>3 000 lignes</b> de code <b>Java</b> en production réparties sur plusieurs dépôts",
-                  "Traité et analysé des ensembles de données contenant plus de <b>50 millions</b> de lignes réparties sur plus de <b>30 tables BigQuery</b>",
-                  "Écrit plus de <b>500 lignes</b> de scripts <b>Python</b> pour l'analyse, la validation et le dépannage des données",
-                  "Contribué à plus de <b>18 tickets JIRA</b> à travers plusieurs projets d'ingénierie de données",
-                  "Créé et mis en œuvre plus de <b>40 tests unitaires</b> pour assurer la qualité du code et l'intégrité des données",
-                  "Amélioré la qualité des données pour des plateformes d'analytique desservant plus de <b>10 millions d'utilisateurs</b>",
-                  "Développé une solution de surveillance automatisée pour 5 sources de données, envoyant des rapports quotidiens via Microsoft Teams pour une visibilité en temps réel sur la performance des pipelines ETL"
-                ]
-              },
-              technologies: {
-                title: "Technologies",
-                stack: [
-                  "ETL",
-                  "Google BigQuery",
-                  "Google Cloud Platform",
-                  "Apache Beam",
-                  "Java",
-                  "Python",
-                  "SQL",
-                  "GitLab"
-                ]
-              }
-            },
-            ssc: {
-              date: "Mai 2024 - Déc 2024",
-              title: "Analyste de Données",
-              company: "Services Partagés Canada",
-              city: "Montréal, QC, CA",
-              tasks: {
-                title: "Tâches",
-                list: [
-                  "Développé une solution basée sur <b>Python</b> automatisant l'extraction, la vérification et la mise à jour de plus de <b>5 000 lignes</b> de données d'emails à travers plusieurs fichiers Excel, en utilisant <b>customTkinter</b> pour l'interface graphique",
-                  "Automatisé plus de <b>15 processus</b> de mise à jour de données récurrents avec <b>Power Automate</b>",
-                  "Migré un jeu de données consolidé provenant de Excel couvrant plus de <b>10 services</b> vers un <b>serveur SQL Azure</b> en utilisant <b>SSMS</b>",
-                  "Importé, transformé et visualisé des données dans <b>Power BI</b>, en améliorant plus de <b>5 rapports</b> existants avec <b>20+ nouvelles visualisations</b>"
-                ]
-              },
-              technologies: {
-                title: "Technologies",
-                stack: [
-                  "Python",
-                  "SQL",
-                  "Tkinter",
-                  "Interface Utilisateur",
-                  "Azure SQL",
-                  "AI Hub",
-                  "Power Automate",
-                  "Power BI",
-                  "Power Query"
-                ]
-              }
-            },
-            matrox: {
-              date: "Jan 2023 - Août 2023",
-              title: "Technicien R&D",
-              company: "Matrox",
-              city: "Montréal, QC, CA",
-              tasks: {
-                title: "Tâches",
-                list: [
-                  "Développé et amélioré plus de <b>10 fonctionnalités</b> dans un <b>projet C</b> existant",
-                  "Résolu plus de <b>15 bogues</b> affectant l'intégration des nouvelles fonctionnalités",
-                  "Configuré une <b>machine virtuelle Ubuntu</b> depuis zéro pour répondre aux besoins spécifiques du projet",
-                  "Effectué plus de <b>50 tests</b> du protocole HDMI sur divers appareils à l'aide d'un oscilloscope pour vérifier la conformité et la performance"
-                ]
-              },
-              technologies: {
-                title: "Technologies",
-                stack: [
-                  "C/C++",
-                  "MATLAB",
-                  "Ubuntu",
-                  "Oscilloscope",
-                  "Electronics",
-                  "Raspberry Pi"
-                ]
-              }
-            },
-            addatech: {
-              date: "Juin 2022 - Août 2022",
-              title: "Technicien Support Technique",
-              company: "Addatech",
-              city: "Laval, QC, CA",
-              tasks: {
-                title: "Tâches",
-                list: [
-                  "Répondu à plus de <b>30</b> demandes de support technique par email et téléphone",
-                  "Fournit des solutions écrites et des étapes de dépannage pour résoudre plus de <b>10 problèmes</b> utilisateurs, améliorant ainsi le temps de résolution",
-                  "Utilisé des logiciels de prise en main à distance pour aider plus de <b>5 utilisateurs</b> dans le dépannage et la résolution de problèmes techniques",
-                  "Assisté dans l'installation et la configuration de logiciels pour plus de <b>10 utilisateurs</b>"
-                ]
-              },
-              technologies: {
-                title: "Technologies",
-                stack: [
-                  "SQL"
-                ]
-              }
-            }
-          },
-
           projects: {
             title: "Projets",
-            digiclipse: {
-              title: "DigiClipse",
+            bati: {
+              title: "Bâti mécano-soudé industriel",
               description:
-                "Assurer la disponibilité des pièces en automatisant l'extraction et la vérification des numéros de pièces via des fichiers Excel et l'API Digikey, tout en gérant les erreurs humaines à l'aide de <b>Pandas</b>, <b>Python</b>, <b>Docker</b> et des <b>APIs</b>.",
+                "Réalisation d’un <b>bâti mécano-soudé industriel</b> à partir d’un <b>cahier des charges</b>. Conception du <b>système complet</b>, choix des <b>matériaux</b>, des <b>profilés</b> et des <b>liaisons</b> (soudure, boulons, tenons/mortaises). <b>Modélisation 3D</b> sous <b>SolidWorks</b>, calculs de <b>résistance</b> et validation par <b>éléments finis</b>. Production des <b>dessins techniques</b> et d’un <b>rapport de conception</b> respectant les <b>normes industrielles</b>. Application des compétences en <b>statique</b>, <b>dynamique</b>, <b>résistance des matériaux</b>, <b>dessin technique</b>, <b>gestion de projet</b> et <b>présentation technique</b>."
             },
-            arcade: {
-              title: "Arcade",
+            convoyeur: {
+              title: "Convoyeur à palettes",
               description:
-                "Création d'un <b>jeu d'arcade</b> à partir de rien, conception du <b>matériel</b> et du <b>logiciel</b>. Programmation du <b>gameplay</b>, de l'<b>interface utilisateur</b>, des <b>menus</b> et des <b>paramètres</b> tout en optimisant les performances. Application des compétences en <b>programmation de jeux</b>, <b>Arduino</b>, <b>conception d'interface</b>, <b>intégration de contrôleur</b> et <b>électronique</b>.",
+                "Conception complète d’un <b>convoyeur à palettes</b> industriel selon un profil de charge défini. Sélection du <b>type de chaîne (RS Tsubaki)</b>, des <b>roues dentées</b>, du <b>motoréducteur SEW</b> et des <b>roulements</b>. Réalisation des <b>calculs de puissance</b>, de <b>tension dans les chaînes</b>, de <b>rapport de réduction</b> et de <b>dimensionnement de l’arbre principal</b>. Modélisation 3D sous <b>SolidWorks</b>, création des <b>dessins techniques</b> (assemblage, arbre, motoréducteur) et remise d’un dossier complet incluant le <b>fichier Excel de calculs</b> et le <b>Pack&Go</b>. Application des compétences en <b>sélection de composants industriels</b>, <b>liaisons mécaniques</b>, <b>modélisation CAO</b>, et <b>normes de dessin technique</b>.",
             },
-            aspire: {
-              title: "Aspire",
+            escabot: {
+              title: "Escabot",
               description:
-                "Développement d'un <b>assistant vocal</b> nommé <b>Aspire</b> (en cours de développement) pour le <b>contrôle d'ordinateur</b>. Il permet aux utilisateurs d'<b>ouvrir des applications</b>, de <b>naviguer sur le web</b> et de poser des questions à <b>ChatGPT</b>. Le projet utilise <b>OpenAI GPT-3</b> et <b>Python</b>, des <b>APIs</b> pour l'intégration, et la gestion de <b>fichiers audio</b>.",
+                "Conception complète d’un <b>assemblage mécanique</b> personnalisé à l’aide des outils avancés de <b>SolidWorks</b>. Modélisation de pièces à l’aide des fonctions de <b>tôlerie</b> et de <b>mécano-soudure</b>, intégration d’un <b>assemblage complet avec quincaillerie</b> respectant les normes. Réalisation de plus de <b>10 mises en plan techniques</b> précises, incluant une <b>vue éclatée annotée</b> selon les standards de fabrication. Création d’une <b>vidéo de présentation 'Motion Study'</b> visant à illustrer le fonctionnement de l’assemblage de manière claire et professionnelle, dans une optique de <b>présentation client ou démonstration technique</b>. Mise en valeur des compétences en <b>modélisation 3D</b>, <b>conception d’assemblages industriels</b>, <b>normes de dessin</b> et <b>communication visuelle</b>."
             },
-            database: {
-              title: "Interface de Base de Données Web",
+            cnc: {
+              title: "Project CNC",
               description:
-                "Mise en place d'une <b>interface de base de données web</b> sur un serveur <b>Raspberry Pi</b> avec une <b>interface web</b> qui simplifie l'<b>affichage</b>, la <b>saisie</b> et la <b>manipulation des données</b>. Utilisation des meilleures pratiques de <b>développement web</b>, intégration des capacités <b>SQL</b> avec une <b>interface utilisateur</b> conviviale et utilisation de <b>MariaDB</b> pour une gestion robuste de la base de données.",
+                "Réalisation d’un <b>projet d’usinage complet</b> sur centre d’usinage CNC. Conception d’une <b>pièce mécanique personnalisée</b> en <b>3D avec Autodesk Inventor</b>, rédaction du <b>programme G-code</b> manuellement et avec <b>Mastercam</b> (G00, G01, G02, G03, cycles fixes), puis simulation dans <b>Véricut</b> pour validation. Préparation du <b>montage d’usinage</b>, ajustement des <b>origines</b> et mise en marche de la machine. Réalisation de la pièce sur MOCN avec optimisation des <b>vitesses d’avance</b>, du <b>choix d’outil</b> et des <b>paramètres de coupe</b>. Vérification dimensionnelle et visuelle de la pièce finale pour garantir la <b>qualité d’usinage</b>."
             },
             voiceTranslator: {
               title: "Traducteur Vocal",

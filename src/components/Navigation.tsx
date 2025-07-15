@@ -29,7 +29,6 @@ function Navigation({ parentToChild, modeChange }: any) {
 
   const navItems = [
     [t("navigation.expertise"), "expertise"],
-    [t("navigation.career"), "history"],
     [t("navigation.projects"), "projects"],
     [t("navigation.contact"), "contact"],
   ];

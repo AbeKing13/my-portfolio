@@ -15,6 +15,10 @@ function Project() {
     let playTimeout: NodeJS.Timeout;
 
     if (videoRef.current) {
+
+      videoRef.current.defaultPlaybackRate = 2.0;
+      videoRef.current.playbackRate = 2.0;
+
       gsap.to(videoRef.current, {
         scrollTrigger: {
           trigger: videoRef.current,
@@ -56,120 +60,88 @@ function Project() {
         <div className="project">
           <div className="image-container">
             <img
-              src={require("../assets/images/projects/digiclipse_main.jpg")}
+              src={require("../assets/images/projects/bati_main.jpg")}
               className="zoom"
-              alt="DigiClipse interface"
+              alt="Welded Frame Structure 3D"
               width="50%"
             />
             <img
-              src={require("../assets/images/projects/digiclipse_showcase.png")}
+              src={require("../assets/images/projects/bati_contrainte.jpg")}
               className="zoom"
-              alt="DigiClipse code"
+              alt="Welded Frame Structure 2D"
               width="50%"
             />
           </div>
           <div className="project-title">
-            <h2>{t("projects.digiclipse.title")}</h2>
+            <h2>{t("projects.bati.title")}</h2>
           </div>
-          <p dangerouslySetInnerHTML={{ __html: t("projects.digiclipse.description") }}/>
+          <p dangerouslySetInnerHTML={{ __html: t("projects.bati.description") }}/>
         </div>
+        
+        
+        <div className="project">
+          <div className="image-container-second">
+            <img
+                src={require("../assets/images/projects/convoyeur_main.jpg")}
+                className="zoom"
+                alt="DigiClipse interface"
+                width="50%"
+              />
+              <img
+                src={require("../assets/images/projects/convoyeur_2d.jpg")}
+                className="zoom"
+                alt="DigiClipse code"
+                width="50%"
+              />
+          </div>
+          <div className="project-title">
+            <h2>{t("projects.convoyeur.title")}</h2>
+          </div>
+          <p dangerouslySetInnerHTML={{ __html: t("projects.convoyeur.description") }}/>
+        </div>
+        
+        
         <div className="project">
           <video
             ref={videoRef}
-            src={require("../assets/images/projects/arcade.mp4")}
+            src={require("../assets/images/projects/escabot.mp4")}
             className="zoom"
-            poster={require("../assets/images/projects/arcade_thumbnail.png")}
+            poster={require("../assets/images/projects/escabot_thumbnail.jpg")}
             loop
             muted
             playsInline
           />
           <div className="project-title">
-            <h2>{t("projects.arcade.title")}</h2>
+            <h2>{t("projects.escabot.title")}</h2>
           </div>
-          <p dangerouslySetInnerHTML={{ __html: t("projects.arcade.description") }}/>
+          <p dangerouslySetInnerHTML={{ __html: t("projects.escabot.description") }}/>
         </div>
+
+
         <div className="project">
-          <img
-            src={require("../assets/images/projects/aspire.jpg")}
-            className="zoom"
-            alt="thumbnail"
-            width="100%"
-          />
-          <div className="project-title">
-            <h2>{t("projects.aspire.title")}</h2>
-          </div>
-          <p dangerouslySetInnerHTML={{ __html: t("projects.aspire.description") }}/>
-        </div>
-        <div className="project">
-          <img
-            src={require("../assets/images/projects/database.jpg")}
-            className="zoom"
-            alt="thumbnail"
-            width="100%"
-          />
-          <div className="project-title">
-            <h2>{t("projects.database.title")}</h2>
-          </div>
-          <p dangerouslySetInnerHTML={{ __html: t("projects.database.description") }}/>
-        </div>
-        <div className="project">
-          <img
-            src={require("../assets/images/projects/voice_translator.jpg")}
-            className="zoom"
-            alt="thumbnail"
-            width="100%"
-          />
-          <div className="project-title">
-            <h2>{t("projects.voiceTranslator.title")}</h2>
-          </div>
-          <p>
-          <p dangerouslySetInnerHTML={{ __html: t("projects.voiceTranslator.description") }}/>
-          </p>
-        </div>
-        <div className="project">
-          <div className="image-container">
+          <div className="image-container-small-video">
             <img
-              src={require("../assets/images/projects/ssc_main.png")}
-              className="zoom main-image"
-              alt="Main project view"
-              width="100%"
-            />
-            <img
-              src={require("../assets/images/projects/ssc_settings.png")}
+              src={require("../assets/images/projects/cnc_main.jpg")}
               className="zoom"
-              alt="Project detail 1"
-              width="100%"
+              alt="Welded Frame Structure 3D"
+              width="50%"
+            />
+            <video
+              ref={videoRef}
+              src={require("../assets/images/projects/cnc.mp4")}
+              className="zoom"
+              poster={require("../assets/images/projects/escabot_thumbnail.jpg")}
+              loop
+              muted
+              playsInline
             />
           </div>
           <div className="project-title">
-            <h2>{t("projects.dataUpdater.title")}</h2>
+            <h2>{t("projects.cnc.title")}</h2>
           </div>
-          <p dangerouslySetInnerHTML={{ __html: t("projects.dataUpdater.description") }}/>
+          <p dangerouslySetInnerHTML={{ __html: t("projects.cnc.description") }}/>
         </div>
-        <div className="project">
-          <img
-            src={require("../assets/images/projects/sga.png")}
-            className="zoom"
-            alt="thumbnail"
-            width="100%"
-          />
-          <div className="project-title">
-            <h2>{t("projects.classManagement.title")}</h2>
-          </div>
-          <p dangerouslySetInnerHTML={{ __html: t("projects.classManagement.description") }}/>
-        </div>
-        <div className="project">
-          <img
-            src={require("../assets/images/projects/portfolio.png")}
-            className="zoom"
-            alt="thumbnail"
-            width="100%"
-          />
-          <div className="project-title">
-            <h2>{t("projects.portfolio.title")}</h2>
-          </div>
-          <p dangerouslySetInnerHTML={{ __html: t("projects.portfolio.description") }}/>
-        </div>
+        
       </div>
     </div>
   );
