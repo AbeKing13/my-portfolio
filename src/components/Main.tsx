@@ -17,15 +17,7 @@ function Main() {
         <div className="content">
           <div className="social_icons">
             <a
-              href="https://github.com/amir-hammar"
-              target="_blank"
-              rel="noreferrer noopener"
-              title="GitHub"
-            >
-              <GitHubIcon />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/amirhammar/"
+              href="https://www.linkedin.com/in/albert-kindundu/"
               target="_blank"
               rel="noreferrer noopener"
               title="LinkedIn"
@@ -33,20 +25,20 @@ function Main() {
               <LinkedInIcon />
             </a>
           </div>
-          <h1>Amir Hammar</h1>
+          <h1>Albert Kindundu</h1>
           <div className="student-info">
             <p>{t("main.role")}</p>
           </div>
           <div className="school-logo">
             <a
-              href="https://www.etsmtl.ca/"
+              href="https://www.cvm.qc.ca/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <img
-                src={require("../assets/images/home/ets.png")}
-                alt="ÉTS Logo"
-                className="ets-logo"
+                src={require("../assets/images/home/cvm.png")}
+                alt="CVM Logo"
+                className="cvm-logo"
               />
             </a>
           </div>

@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 function Contact() {
   const { t } = useTranslation();
   const handleEmailClick = () => {
-    window.location.href = "mailto:amirhammar2206@gmail.com";
+    window.location.href = "mailto:albertkindundu@yahoo.ca";
   };
 
   return (

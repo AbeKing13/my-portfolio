@@ -228,7 +228,7 @@
   width: 100%;
   padding: 0px 15%;
   min-height: 70vh;
-  background-image: url("../images/home/bg-dark.png");
+  background-image: url("../images/home/bg-dark.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -288,7 +288,7 @@
   display: flex;
   align-items: center;
 
-  .ets-logo {
+  .cvm-logo {
     width: 40px;
     height: 40px;
     border-radius: 20%;
@@ -370,7 +370,7 @@
     }
 
     .school-logo {
-      .ets-logo {
+      .cvm-logo {
         width: 35px;
         height: 35px;
         position: relative;

@@ -13,8 +13,7 @@ i18n
       en: {
         translation: {
           main: {
-            role: "Software Engineer Student",
-            footer: "A portfolio built by Amir Hammar",
+            role: "Mechanical Engineering Technician"
           },
 
           navigation: {
@@ -249,8 +248,7 @@ i18n
       fr: {
         translation: {
           main: {
-            role: "Étudiant en Génie Logiciel",
-            footer: "Un portfolio construit par Amir Hammar",
+            role: "Diplômé en Technique du Génie Mécanique"
           },
 
           navigation: {
